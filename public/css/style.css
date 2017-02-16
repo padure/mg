@@ -60,6 +60,9 @@ and open the template in the editor.
 .form button{
     width: 100px;
 }
+.form p{
+    font-size: 26px;
+}
 .materiale{
 }
 .contactare .telefon{
