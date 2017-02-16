@@ -24,7 +24,8 @@ and open the template in the editor.
 .color{
     width: 40px;
     height: 40px;
-    margin: 26px;
+    margin: 14px;
+    float: left;
 }
 .materie-1{
     background-color: red;
@@ -49,12 +50,11 @@ and open the template in the editor.
     background-repeat: no-repeat;
 }
 .imagine img{
-    width: 100%;
+    width: 15%;
     height: auto;
 }
 
 .form{
-    border: 1px solid gray;
     text-align: center;
     padding: 45px;
 }
@@ -62,7 +62,6 @@ and open the template in the editor.
     width: 100px;
 }
 .materiale{
-    border-right: 1px solid gray;
 }
 .contactare .telefon{
     margin: 0!important;
