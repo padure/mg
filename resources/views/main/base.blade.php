@@ -77,7 +77,7 @@
   </div>
   
 </header>
-,.asasasasasasas
+
 <!-- Footer -->
 <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
   <h5>Find Us On</h5>
