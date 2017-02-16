@@ -45,7 +45,7 @@
   <img class="w3-image" src="images/hotel.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
   <div class="w3-display-left w3-padding w3-col m6">
   <div class="w3-container w3-white w3-padding-0">
-	<video width="100%" autoplay>
+	<video width="100%" >
 	  <source src="video/sp1.mp4" type="video/mp4">
 	  <source src="mov_bbb.ogg" type="video/ogg">
 	</video>
