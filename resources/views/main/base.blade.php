@@ -32,7 +32,7 @@
 
 <!-- Navigation Bar -->
 <ul class="w3-navbar w3-white w3-large">
-  <li><a href="#" class="w3-red"><i class="glyphicon glyphicon-home w3-margin-right"></i>Logo</a></li>
+  <li><a href="{{URL("/")}}" class="w3-red"><i class="glyphicon glyphicon-home w3-margin-right"></i>Logo</a></li>
   <li class="w3-right"><a href="#"><i class="fa fa-vk"></i></a></li>
   <li class="w3-right"><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
   <li class="w3-right"><a href="#"><i class="fa fa-instagram w3-hover-text-purple"></i></a></li>
@@ -42,7 +42,7 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="images/sac.jpg" alt="The Hotel" style="min-width:1000px" width="100%" height="800">
+  <img class="w3-image" src="images/sac.jpg" alt="The Hotel" style="min-width:1000px" width="100%" height="500">
   <div class="w3-display-left w3-col m6">
   <div class="w3-container w3-white w3-padding-0">
 	<video width="100%" >
@@ -81,13 +81,13 @@
   
 </header>
 <!-- Page content -->
-<div class="my-container">
+<div class="my-container row">
     <div class="w3-container" id="produs">
         <h3>Produs 1</h3>
-        <div class="w3-col m3 imagine">
-            <img src="{{asset('images/sac1.jpg')}}" class="img-rounded">
+        <div class="col-md-3 imagine">
+            <img src="{{asset('images/sac1.jpg')}}" class="img-rounded img-responsive">
         </div>
-        <div class="w3-col m1 materiale">
+        <div class="col-md-1 materiale">
                 <div class="color materie-1">
                 </div>
                 <div class="color materie-2">
@@ -97,7 +97,7 @@
                 <div class="color materie-4">
                 </div>
         </div>
-        <div class="w3-col m5 form">
+        <div class="col-md-6 form">
             <p>Description product</p>
             <h3>10 $</h3>
             <button class="btn btn-success">Bay</button>
@@ -105,10 +105,10 @@
     </div>
     <div class="w3-container" id="produs">
         <h3>Produs 2</h3>
-        <div class="w3-col m3 imagine">
-            <img src="{{asset('images/sac2.jpg')}}" class="img-rounded">
+        <div class="col-md-3 imagine">
+            <img src="{{asset('images/sac2.jpg')}}" class="img-rounded img-responsive">
         </div>
-        <div class="w3-col m1 materiale">
+        <div class="col-md-1 materiale">
                 <div class="color materie-1">
                 </div>
                 <div class="color materie-2">
@@ -118,7 +118,7 @@
                 <div class="color materie-4">
                 </div>
         </div>
-        <div class="w3-col m5 form">
+        <div class="col-md-6 form">
             <p>Description product</p>
             <h3>10 $</h3>
             <button class="btn btn-success">Bay</button>
@@ -126,10 +126,10 @@
     </div>
     <div class="w3-container" id="produs">
         <h3>Produs 3</h3>
-        <div class="w3-col m3 imagine">
-            <img src="{{asset('images/sac3.jpg')}}" class="img-rounded">
+        <div class="col-md-3 imagine">
+            <img src="{{asset('images/sac3.jpg')}}" class="img-rounded img-responsive">
         </div>
-        <div class="w3-col m1 materiale">
+        <div class="col-md-1 materiale">
                 <div class="color materie-1">
                 </div>
                 <div class="color materie-2">
@@ -139,7 +139,7 @@
                 <div class="color materie-4">
                 </div>
         </div>
-        <div class="w3-col m5 form">
+        <div class="col-md-6 form">
             <p>Description product</p>
             <h3>10 $</h3>
             <button class="btn btn-success">Bay</button>
