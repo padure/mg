@@ -9,6 +9,10 @@
         <script src="{{ asset("js/bootstrap.min.js") }}"></script>
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
+        
+        <link href="{{ asset("css/style_products.css") }}" rel="stylesheet" >
+        <link href="{{ asset("css/responsive.css") }}" rel="stylesheet" >
+        
         <link href="{{ asset("css/bootstrap-theme.min.css") }}" rel="stylesheet" type="text/css">
         <link href="{{ asset("css/w3_1.css") }}" rel="stylesheet" type="text/css">
         <link href="{{ asset("css/fonts.css") }}" rel="stylesheet" type="text/css">
@@ -28,7 +32,7 @@
             body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
         </style>
     </head>
-    <body class="w3-light-grey">
+    <body>
 
 <!-- Navigation Bar -->
 <ul class="w3-navbar w3-white w3-large">
@@ -81,73 +85,55 @@
   
 </header>
 <!-- Page content -->
-<div class="w3-row-padding">
-    <div class="col-md-12" id="produs">
-        <h3>Produs 1</h3>
-        <div class="col-md-4 imagine row">
-            <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
-        </div>
-        <div class="col-md-1 materiale">
-                <div class="color materie-1">
+<section class="product_area section-padding">
+    <!--Un produs -->
+    @for($i=1;$i<=3;$i++)
+    <div class="col-md-12">
+        <div class="row">
+            <div class="padding_right main_single_product">
+                <div class="single_product">
+                    <div class="product_img">
+                        <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
+                        <div class="product_color">
+                            <div class="materiale">
+                                <div class="color materie-1">
+                                </div>
+                                <div class="color materie-2">
+                                </div>
+                                <div class="color materie-3">
+                                </div>
+                                <div class="color materie-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="color materie-2">
+            </div>
+            <div class="padding_left main_single_product">
+                <div class="single_product single_product_two">
+                    <div class="product_img">
+                        <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
+                    </div>
+                    <div class="product_text_two product_text">
+                        <h1>Product {{$i}}</h1>
+                        <p>100% COMBED COTTON</p>
+                        <p>COLOR: DARK BLUE</p>
+                        <p>ROUND NECK & HALF SLEEVES</p>
+                        <p>Classic fit, slightly long</p>
+                        <p>GSM: 180</p>
+                        <p>PRICE: $ 21.99</p>
+                        <a class="shop_now_btn" href="#">Cumpara acum</a>
+                    </div>
                 </div>
-                <div class="color materie-3">
-                </div>
-                <div class="color materie-4">
-                </div>
-        </div>
-        <div class="col-md-6 form">
-            <p>Descriere product</p>
-            <h3>10 $</h3>
-            <button class="btn btn-success">Bay</button>
-        </div>
-    </div>
-    
-    <div class="col-md-12" id="produs">
-        <h3>Produs 2</h3>
-        <div class="col-md-4 imagine row">
-            <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
-        </div>
-        <div class="col-md-1 materiale">
-                <div class="color materie-1">
-                </div>
-                <div class="color materie-2">
-                </div>
-                <div class="color materie-3">
-                </div>
-                <div class="color materie-4">
-                </div>
-        </div>
-        <div class="col-md-6 form">
-            <p>Descriere product</p>
-            <h3>10 $</h3>
-            <button class="btn btn-success">Bay</button>
-        </div>
-    </div>
-    
-    <div class="col-md-12" id="produs">
-        <h3>Produs 3</h3>
-        <div class="col-md-4 imagine row">
-            <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
-        </div>
-        <div class="col-md-1 materiale">
-                <div class="color materie-1">
-                </div>
-                <div class="color materie-2">
-                </div>
-                <div class="color materie-3">
-                </div>
-                <div class="color materie-4">
-                </div>
-        </div>
-        <div class="col-md-6 form">
-            <p>Descriere product</p>
-            <h3>10 $</h3>
-            <button class="btn btn-success">Bay</button>
+            </div>
         </div>
     </div>
-</div>
+    <!--End produs -->
+    @endfor
+</section>
+
+
+
 <!-- Footer -->
 <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
   <h5>Find Us On</h5>
