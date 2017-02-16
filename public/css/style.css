@@ -7,4 +7,59 @@ and open the template in the editor.
     Created on : Feb 15, 2017, 7:11:33 PM
     Author     : Padure Gheorghe
 */
+.w3-display-left{
+    top: 40%!important;
+}
+.w3-display-right{
+    top: 37%!important;
+}
+.my-container{
+    width: 1700px;
+    height: auto;
+    background-color: white;
+    font-size: 45px;
+    padding: 0!important;
+    margin: 0!important;
+}
+.color{
+    width: 40px;
+    height: 40px;
+    margin: 26px;
+}
+.materie-1{
+    background-color: red;
+}
+.materie-2{
+    background-color: yellow;
+}
+.materie-3{
+    background-color: blue;
+}
+.materie-4{
+    background-color: green;
+}
+#produs{
+    border-bottom: 1px solid gray;
+    height: 350px;
+}
+.imagine{
+    height: auto;
+    /*background-image: URL(../images/sac.jpg);*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.imagine img{
+    width: 100%;
+}
 
+.form{
+    border: 1px solid gray;
+    text-align: center;
+    padding: 45px;
+}
+.form button{
+    width: 100px;
+}
+.materiale{
+    border-right: 1px solid gray;
+}
