@@ -43,7 +43,7 @@
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">
   <img class="w3-image" src="images/hotel.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
-  <div class="w3-display-left w3-padding w3-col m6">
+  <div class="w3-display-left w3-col m6">
   <div class="w3-container w3-white w3-padding-0">
 	<video width="100%" >
 	  <source src="video/sp1.mp4" type="video/mp4">
@@ -51,7 +51,7 @@
 	</video>
   </div>
   </div>
-  <div class="w3-display-right w3-padding w3-col m4">
+  <div class="w3-display-right w3-col m4">
 	<div class="w3-container w3-white">
       <h2><i class="glyphicon glyphicon-info-sign w3-margin-right"></i>Informatii</h2>
     </div>
@@ -77,7 +77,72 @@
   </div>
   
 </header>
-
+<!-- Page content -->
+<div class="my-container">
+    <div class="w3-container" id="produs">
+        <h3>Produs 1</h3>
+        <div class="w3-col m3 imagine">
+            <img src="{{asset('images/sac.jpg')}}" class="img-rounded">
+        </div>
+        <div class="w3-col m1 materiale">
+                <div class="color materie-1">
+                </div>
+                <div class="color materie-2">
+                </div>
+                <div class="color materie-3">
+                </div>
+                <div class="color materie-4">
+                </div>
+        </div>
+        <div class="w3-col m5 form">
+            <p>Description product</p>
+            <h3>10 $</h3>
+            <button class="btn btn-success">Bay</button>
+        </div>
+    </div>
+    <div class="w3-container" id="produs">
+        <h3>Produs 2</h3>
+        <div class="w3-col m3 imagine">
+            <img src="{{asset('images/sac.jpg')}}" class="img-rounded">
+        </div>
+        <div class="w3-col m1 materiale">
+                <div class="color materie-1">
+                </div>
+                <div class="color materie-2">
+                </div>
+                <div class="color materie-3">
+                </div>
+                <div class="color materie-4">
+                </div>
+        </div>
+        <div class="w3-col m5 form">
+            <p>Description product</p>
+            <h3>10 $</h3>
+            <button class="btn btn-success">Bay</button>
+        </div>
+    </div>
+    <div class="w3-container" id="produs">
+        <h3>Produs 3</h3>
+        <div class="w3-col m3 imagine">
+            <img src="{{asset('images/sac.jpg')}}" class="img-rounded">
+        </div>
+        <div class="w3-col m1 materiale">
+                <div class="color materie-1">
+                </div>
+                <div class="color materie-2">
+                </div>
+                <div class="color materie-3">
+                </div>
+                <div class="color materie-4">
+                </div>
+        </div>
+        <div class="w3-col m5 form">
+            <p>Description product</p>
+            <h3>10 $</h3>
+            <button class="btn btn-success">Bay</button>
+        </div>
+    </div>
+</div>
 <!-- Footer -->
 <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
   <h5>Find Us On</h5>
