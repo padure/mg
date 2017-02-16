@@ -46,7 +46,7 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="images/sac.jpg" alt="The Hotel" style="min-width:1000px" width="100%" height="500">
+  <img class="w3-image" src="images/sac.jpg" alt="The Hotel" style="min-width:100px" width="100%" height="500">
   <div class="w3-display-left w3-col m6">
   <div class="w3-container w3-white w3-padding-0">
 	<video width="100%" >
