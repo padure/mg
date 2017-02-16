@@ -41,16 +41,15 @@ and open the template in the editor.
 }
 #produs{
     border-bottom: 1px solid gray;
-    height: 350px;
 }
 .imagine{
     height: auto;
     /*background-image: URL(../images/sac.jpg);*/
     background-size: 100%;
     background-repeat: no-repeat;
+    padding-bottom:10px;
 }
 .imagine img{
-    width: 15%;
     height: auto;
 }
 

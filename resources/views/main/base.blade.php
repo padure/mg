@@ -81,12 +81,11 @@
   
 </header>
 <!-- Page content -->
-<div class="my-container row">
-    <div class="col-md-12">
-    <div class="w3-container col-md-12" id="produs">
+<div class="w3-row-padding">
+    <div class="col-md-12" id="produs">
         <h3>Produs 1</h3>
-        <div class="col-md-4 imagine">
-            <!--img src="{{asset('images/sac1.jpg')}}" class="img-rounded img-responsive"-->
+        <div class="col-md-4 imagine row">
+            <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
         </div>
         <div class="col-md-1 materiale">
                 <div class="color materie-1">
@@ -98,16 +97,17 @@
                 <div class="color materie-4">
                 </div>
         </div>
-        <div class="col-md-5 form">
-            <p>Description product</p>
+        <div class="col-md-6 form">
+            <p>Descriere product</p>
             <h3>10 $</h3>
             <button class="btn btn-success">Bay</button>
         </div>
     </div>
-    <div class="w3-container col-md-12" id="produs">
+    
+    <div class="col-md-12" id="produs">
         <h3>Produs 2</h3>
-        <div class="col-md-4 imagine">
-            <!--img src="{{asset('images/sac2.jpg')}}" class="img-rounded img-responsive"-->
+        <div class="col-md-4 imagine row">
+            <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
         </div>
         <div class="col-md-1 materiale">
                 <div class="color materie-1">
@@ -119,16 +119,17 @@
                 <div class="color materie-4">
                 </div>
         </div>
-        <div class="col-md-5 form">
-            <p>Description product</p>
+        <div class="col-md-6 form">
+            <p>Descriere product</p>
             <h3>10 $</h3>
             <button class="btn btn-success">Bay</button>
         </div>
     </div>
-    <div class="w3-container col-md-12" id="produs">
+    
+    <div class="col-md-12" id="produs">
         <h3>Produs 3</h3>
-        <div class="col-md-4 imagine">
-            <!--img src="{{asset('images/sac3.jpg')}}" class="img-rounded img-responsive"-->
+        <div class="col-md-4 imagine row">
+            <img src="{{asset('images/sac1.jpg')}}" class="img-responsive img-rounded ">
         </div>
         <div class="col-md-1 materiale">
                 <div class="color materie-1">
@@ -140,12 +141,11 @@
                 <div class="color materie-4">
                 </div>
         </div>
-        <div class="col-md-5 form">
-            <p>Description product</p>
+        <div class="col-md-6 form">
+            <p>Descriere product</p>
             <h3>10 $</h3>
             <button class="btn btn-success">Bay</button>
         </div>
-       </div>
     </div>
 </div>
 <!-- Footer -->
