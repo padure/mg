@@ -42,7 +42,7 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="images/hotel.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
+  <img class="w3-image" src="images/sac.jpg" alt="The Hotel" style="min-width:1000px" width="100%" height="800">
   <div class="w3-display-left w3-col m6">
   <div class="w3-container w3-white w3-padding-0">
 	<video width="100%" >
@@ -53,27 +53,30 @@
   </div>
   <div class="w3-display-right w3-col m4">
 	<div class="w3-container w3-white">
-      <h2><i class="glyphicon glyphicon-info-sign w3-margin-right"></i>Informatii</h2>
-    </div>
-    <div class="w3-container w3-red">
-      <h2><i class="glyphicon glyphicon-earphone w3-margin-right"></i>Contactatine</h2>
-    </div>
-    <div class="w3-container w3-white w3-padding-16">
+            <h2><i class="glyphicon glyphicon-info-sign w3-margin-right"></i>Informatii</h2>
+        </div>
+        <div class="w3-container w3-red">
+            <h2>+373-79-123-321</h2>
+        </div>
+      <div class="w3-container w3-white w3-padding-16">
       <form action="form.asp" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-row-padding">
           <div class="w3-margin-bottom">
-            <label><i class="fa fa-calendar-o"></i> Check In</label>
-            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+            <label><i class="fa fa-calendar-o"></i> Telefon</label>
+            <input class="w3-input w3-border" type="text" placeholder="Telefon" name="CheckIn" required>
           </div>
         </div>
-        <div class="w3-row-padding" style="margin:8px -16px;">
+        <div class="w3-row-padding">
           <div class="w3-margin-bottom">
-            <label><i class="fa fa-male"></i> Adults</label>
-            <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+            <label><i class="fa fa-male"></i> E - mail</label>
+            <input class="w3-input w3-border" type="e-mail"  name="e-mail" placeholder="E - mail">
           </div>
         </div>
       </form>
     </div>
+        <div class="w3-container w3-white contactare">
+              <button class="telefon btn btn btn-primary"><i class="glyphicon glyphicon-earphone w3-margin-right"></i>Telefona-ti!</button>
+        </div>
   </div>
   
 </header>
@@ -82,7 +85,7 @@
     <div class="w3-container" id="produs">
         <h3>Produs 1</h3>
         <div class="w3-col m3 imagine">
-            <img src="{{asset('images/sac.jpg')}}" class="img-rounded">
+            <img src="{{asset('images/sac1.jpg')}}" class="img-rounded">
         </div>
         <div class="w3-col m1 materiale">
                 <div class="color materie-1">
@@ -103,7 +106,7 @@
     <div class="w3-container" id="produs">
         <h3>Produs 2</h3>
         <div class="w3-col m3 imagine">
-            <img src="{{asset('images/sac.jpg')}}" class="img-rounded">
+            <img src="{{asset('images/sac2.jpg')}}" class="img-rounded">
         </div>
         <div class="w3-col m1 materiale">
                 <div class="color materie-1">
@@ -124,7 +127,7 @@
     <div class="w3-container" id="produs">
         <h3>Produs 3</h3>
         <div class="w3-col m3 imagine">
-            <img src="{{asset('images/sac.jpg')}}" class="img-rounded">
+            <img src="{{asset('images/sac3.jpg')}}" class="img-rounded">
         </div>
         <div class="w3-col m1 materiale">
                 <div class="color materie-1">
