@@ -38,8 +38,8 @@ and open the template in the editor.
 .materie-4{
     background-color: green;
 }
-#produs{
-    border-bottom: 1px solid gray;
+.produs{
+    margin-bottom: 30px;
 }
 .imagine{
     height: auto;

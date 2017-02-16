@@ -88,7 +88,7 @@
 <section class="product_area section-padding">
     <!--Un produs -->
     @for($i=1;$i<=3;$i++)
-    <div class="col-md-12">
+    <div class="col-md-12 produs">
         <div class="row">
             <div class="padding_right main_single_product">
                 <div class="single_product">
