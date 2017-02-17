@@ -89,7 +89,12 @@ and open the template in the editor.
 .w3-container{
     padding: 0!important;
 }
-.w3-input{
-}
-.row{
+.description{
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #337ab7;
+    color: #ffffff;
+    text-indent: 50px;
+    font-weight: 700;
+    padding: 20px;
 }
