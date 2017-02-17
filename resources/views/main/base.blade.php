@@ -47,6 +47,9 @@
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">
   <img class="w3-image" src="images/sac.jpg" alt="The Hotel" style="min-width:100px" width="100%" height="500">
+  <div class="w3-display-middle w3-col m12 description" style="top: 5%!important;">
+      Cumparati doar aici, doar din Moldova!
+  </div>
   <div class="w3-display-left w3-col m6">
   <div class="w3-container w3-white w3-padding-0">
 	<video width="100%" >
@@ -56,7 +59,7 @@
   </div>
   </div>
   <div class="w3-display-right w3-col m4">
-	<div class="w3-container w3-white">
+	<div class="w3-container w3-white w3-padding-0">
             <h2><i class="glyphicon glyphicon-info-sign w3-margin-right"></i>Informatii</h2>
         </div>
         <div class="w3-container w3-red">
