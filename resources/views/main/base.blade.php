@@ -9,6 +9,7 @@
         <script src="{{ asset("js/bootstrap.min.js") }}"></script>
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
+        <link href="{{ asset("css/style_valentin.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/bootstrap-theme.min.css") }}" rel="stylesheet" type="text/css">
         <!-- token-->
         <meta name="_token" content="{!! csrf_token() !!}"/>
