@@ -31,6 +31,8 @@
                 @include('main.produse')
                 
                 @include('main.publicitate')
+                
+                @include('main.footer')
             </div>
         </div>
     </body>
