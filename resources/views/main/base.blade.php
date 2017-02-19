@@ -29,6 +29,8 @@
                 @include('main.descriere')
                 
                 @include('main.produse')
+                
+                @include('main.publicitate')
             </div>
         </div>
     </body>
