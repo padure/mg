@@ -1,6 +1,6 @@
 <div class="content">
     <div class="col-md-2">
-        <a href="{{URL("/")}}">
+        <a href="{{URL("/")}}"> 
             <img src="{{asset("allimages/logo.png")}}" class="img-responsive"/>
         </a>
     </div>
