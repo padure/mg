@@ -57,14 +57,5 @@ and open the template in the editor.
     margin-left:15px;
 }
 .form_trimite{
-    margin-top:34%;
-}
-.form_trimite .telefon{
-    width: 75%;
-    margin-right: 5%;
-    float:left;
-}
-.form_trimite .okbutton{
-    width: 20%; 
-    float:left;
+    margin-top:17%;
 }
