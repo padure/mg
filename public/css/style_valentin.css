@@ -59,3 +59,38 @@ and open the template in the editor.
 .form_trimite{
     margin-top:17%;
 }
+@media screen and (max-width: 1200px) {
+    .culoare{
+        float:none;
+    }
+    .pret{
+        margin-top:60%;
+    }
+    .suna{
+        margin-top:60%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .locmarime{
+        width: 100%;
+    }
+    .culoare{
+        float:left;
+        margin-left:10px;
+    }
+    .marime{
+        float:left;
+        margin-left:15px;
+    }
+    .pret{
+        margin-top:0px;
+        margin-bottom: 10px;
+    }
+    .suna{
+        margin-top:0px;
+    }
+    .form_trimite{
+        margin-top: 20px;
+    }
+}
