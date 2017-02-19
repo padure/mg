@@ -25,6 +25,10 @@
                 @include('main.meniu')
                 
                 @include('main.video')
+                
+                @include('main.descriere')
+                
+                @include('main.produse')
             </div>
         </div>
     </body>
