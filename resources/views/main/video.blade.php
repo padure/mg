@@ -1,3 +1,4 @@
+<div class="col-md-12 video">
 <div class="col-md-12 title">
     <p class="title-description">
         Title - Deescription the this site MG
@@ -24,3 +25,4 @@
         </div>
     </div>
 </div>
+    </div>

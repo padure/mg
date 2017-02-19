@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : Feb 15, 2017, 7:11:33 PM
     Author     : Padure Gheorghe
 */
+/*Title video*/
 .title-description{
     border: 1px solid gray;
     padding: 50px;
@@ -20,4 +21,40 @@ and open the template in the editor.
 }
 .form button{
     margin-left: 5px;
+}
+.video{
+    padding-top: 25px;
+    padding-bottom: 50px;
+    border: 1px solid gray;
+}
+/*Description*/
+.description{
+    border: 1px solid gray;
+    border-top: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: URL("../images/sac.jpg");
+    background-size: 100%;
+}
+.info-description{
+    border: 1px solid #216a94;
+    background-color: #216a94;
+    color: white;
+}
+.info-description li{
+    font-size: 18px;
+}
+.description-img{
+    padding: 0;
+}
+.description-img img {
+    width: 100%;
+}
+.info-description h2{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.info-description li{
+    text-transform: uppercase;
+    
 }

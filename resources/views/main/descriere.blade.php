@@ -1,9 +1,10 @@
-<div class="col-md-12">
-    <div class="col-md-6">
+<div class="col-md-12 description">
+    
+    <div class="col-md-6 description-img">
         
     </div>
-    <div class="col-md-6">
-        <h3>Titlu</h3>
+    <div class="col-md-6 info-description" >
+        <h2>Titlu</h2>
         <ul>
             <li>Description 1</li>
             <li>Description 2</li>
