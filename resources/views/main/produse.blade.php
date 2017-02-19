@@ -40,7 +40,7 @@
             </div>
             
             <div class="col-md-7 col-sm-10 col-xs-12">
-                <div class="col-md-6 col-xs-6 hidden-xs">
+                <div class="col-md-6 col-xs-6 hidden-sm hidden-xs">
                     <p class="pret">
                         13 000 Lei
                     </p>
@@ -81,7 +81,7 @@
                     </form>
                 </div>
                 
-                <div class="col-md-6 col-xs-12 visible-xs">
+                <div class="col-md-6 col-xs-12 visible-sm visible-xs">
                     <p class="pret">
                         13 000 Lei
                     </p>

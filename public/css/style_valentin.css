@@ -70,7 +70,17 @@ and open the template in the editor.
         margin-top:60%;
     }
 }
-
+@media screen and (max-width: 991px) {
+    .pret{
+        margin-top: 0px;
+    }
+    .suna{
+        margin-top:0px;
+    }
+    .form_trimite{
+        margin-top:10px;
+    }
+}
 @media screen and (max-width: 767px) {
     .locmarime{
         width: 100%;
