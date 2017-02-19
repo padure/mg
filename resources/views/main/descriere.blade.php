@@ -1,4 +1,4 @@
-<div class="col-md-12 description">
+<div class="content description">
     
     <div class="col-md-6 description-img">
         
