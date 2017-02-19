@@ -4,7 +4,7 @@
         
     </div>
     <div class="col-md-6 info-description" >
-        <h2>Titlu</h2>
+        <h1>Titlu</h1>
         <ul>
             <li>Description 1</li>
             <li>Description 2</li>

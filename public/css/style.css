@@ -53,22 +53,24 @@ and open the template in the editor.
     border: 1px solid #216a94;
     background-color: #216a94;
     color: white;
+    padding: 50px;
 }
-.info-description li{
-    font-size: 18px;
-}
+
 .description-img{
     padding: 0;
 }
 .description-img img {
     width: 100%;
 }
-.info-description h2{
+.info-description h1{
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 55px;
 }
 .info-description li{
     text-transform: uppercase;
+    padding: 5px;
+    font-size: 30px;
     
 }
 /*Publicitate*/
