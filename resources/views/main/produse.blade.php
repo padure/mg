@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content fundal">
 @for($i=1;$i<=3;$i++)
     <div class="col-lg-10 produs 
          <?php

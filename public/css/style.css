@@ -95,3 +95,9 @@ and open the template in the editor.
 .footer div{
     padding: 50px;
 }
+.fundal{
+    background-image: URL("../images/video.jpg");
+}
+.produs{
+    background-color: white;
+}
