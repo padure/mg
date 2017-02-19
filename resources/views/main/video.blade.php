@@ -11,10 +11,10 @@
             <source src="mov_bbb.ogg" type="video/ogg">
         </video>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 contacts-info">
         <div class="col-md-12">
             <p class="title-contacts">
-                Text
+                Text - description for contacts
             </p>
         </div>
         <div class="col-md-12 form">
