@@ -10,4 +10,4 @@
 | contains the "web" middleware group. Now create something great!
 |
 /*Rutele Main*/
-Route::get('/','main\MainController@main');
+Route::get('/','Main\MainController@main');

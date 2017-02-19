@@ -10,8 +10,6 @@
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/bootstrap-theme.min.css") }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset("css/fonts.css") }}" rel="stylesheet" type="text/css"><!--Icons -->
-        <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
         <!-- token-->
         <meta name="_token" content="{!! csrf_token() !!}"/>
         <script type="text/javascript">
@@ -21,6 +19,12 @@
         </script>
     </head>
     <body>
-        <h1>Start</h1>
+        <div class="container">
+            <div class="row">
+                @include('main.meniu')
+                
+                @include('main.video')
+            </div>
+        </div>
     </body>
 </html>
