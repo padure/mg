@@ -10,4 +10,21 @@
 | contains the "web" middleware group. Now create something great!
 |
 /*Rutele Main*/
-Route::get('/','MainController@main');
+    Route::get('/','MainController@main');
+
+
+/*Admin rutes*/
+    Route::get('/admin','Admin\AdminController@base');
+    Route::get('/admin/login','Admin\AdminController@getLogin');
+    Route::post('/admin/login','Admin\RegisterController@login');
+    Route::get('/admin/register','Admin\AdminController@getRegister');
+    Route::post('/admin/register','Admin\RegisterController@register');
+    Route::post('/admin/registerother','Admin\RegisterController@registerother');
+    Route::get('/confirm/{email}-{token}','Admin\RegisterController@comfirm');
+    Route::get('/exitadmin','Admin\RegisterController@exitadmin');
+    Route::get('/admin/users','Admin\AdminController@admins');
+    Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
+    Route::get('/admin/reset','Admin\AdminController@reset');
+    Route::post('/admin/reset','Admin\RegisterController@sendemail');
+    Route::post('/admin/setcode','Admin\RegisterController@setcode');
+    Route::post('/admin/newpass','Admin\RegisterController@newpass');
