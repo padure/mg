@@ -16,7 +16,7 @@ class CreateLogoTable extends Migration
         Schema::create('logo', function (Blueprint $table) {
             $table->increments('id');
             $table->string("variable");
-            $table->string("value");
+            $table->string("valuevariable")->nullable();
         });
     }
 

@@ -26,6 +26,9 @@
                 <img src="{{asset("allimages/system/ok.png")}}"/>
             </a>
             <a href="#">
+                <img src="{{asset("allimages/system/instagram.png")}}"/>
+            </a>
+            <a href="#">
                 <img src="{{asset("allimages/system/vk.png")}}"/>
             </a>
             <a href="#">

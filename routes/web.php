@@ -30,7 +30,9 @@
     Route::post('/admin/newpass','Admin\RegisterController@newpass');
 /*Meniu*/
     Route::get('/admin/logo','Admin\LogoController@logo');
-    
+    Route::post('/admin/uploadlogo','Admin\LogoController@uploadlogo');
+    Route::post('/admin/addoredelucru','Admin\LogoController@addoredelucru');
+    Route::post('/admin/addtelefon','Admin\LogoController@addtelefon');
     
 /*Products*/
     Route::get('/admin/products','Admin\ProductsController@products');
