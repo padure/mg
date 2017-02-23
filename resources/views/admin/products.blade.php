@@ -12,11 +12,11 @@
             <b>Introduceti culoarea:</b>
             </div>
             <div class="col-md-6 color">
-                <a class='btn btn-info'>Incarca Color</a>
+                <a class='btn btn-info btn-xs'>Incarca culoare</a>
                 <input type="file" style="display:none;"/>
             </div>
             <div class="col-md-6 color">
-                <a class='btn btn-info'>Incarca Color</a>
+                <a class='btn btn-info btn-xs'>Incarca imagine</a>
                 <input type="file" style="display:none;"/>
             </div>
             
@@ -24,9 +24,14 @@
         
         <div class="col-md-12 marimea">
             <div class="col-md-12">
-            <b>Introduceti marimea</b>
+                <b>Introduceti marimea</b>
             </div>
-            <div class="col-md-12"><input type="text" class="form-control"/></div>
+            <div class="col-md-4">
+                <input type="text" class="form-control text-center" placeholder="XL"/>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-info">+</button>
+            </div>
         </div>
         <div class="col-md-12 pret">
             <div class="col-md-12"><b>Introduceti pretul: </b></div>
