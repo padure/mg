@@ -28,3 +28,9 @@
     Route::post('/admin/reset','Admin\RegisterController@sendemail');
     Route::post('/admin/setcode','Admin\RegisterController@setcode');
     Route::post('/admin/newpass','Admin\RegisterController@newpass');
+/*Meniu*/
+    Route::get('/admin/logo','Admin\LogoController@logo');
+    
+    
+/*Products*/
+    Route::get('/admin/products','Admin\ProductsController@products');
