@@ -11,12 +11,14 @@
             <source src="mov_bbb.ogg" type="video/ogg">
         </video>
     </div>
-    <div class="col-md-6 contacts-info">
+    <div class="col-md-6 contacts-info contacts-margin">
         <div class="col-md-12">
             <p class="title-contacts">
                 Text - description for contacts
             </p>
         </div>
+    </div>
+    <div class="col-md-6 contacts-info">
         <div class="col-md-12 form">
             <p>Form</p>
             <input type="text" class="form-control" placeholder="Telefon"/>

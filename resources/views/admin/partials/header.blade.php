@@ -10,6 +10,7 @@
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("adminstyle/adminstyle.css") }}" rel="stylesheet" >
         <link href="{{ asset("adminstyle/adminstyle_valentin.css") }}" rel="stylesheet" >
+        <link href="{{ asset("adminstyle/ghcss.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/bootstrap-theme.min.css") }}" rel="stylesheet" type="text/css">
         <!--Icons -->
         <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
