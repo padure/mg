@@ -36,3 +36,7 @@
     
 /*Products*/
     Route::get('/admin/products','Admin\ProductsController@products');
+    Route::post('/admin/uploadcolor','Admin\ProductsController@uploadcolor');
+    Route::post('/admin/uploadimage','Admin\ProductsController@uploadimage');
+    Route::post('/admin/defaultupload','Admin\ProductsController@defaultupload');
+    Route::post('/admin/save','Admin\ProductsController@save');
