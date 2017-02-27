@@ -20,7 +20,7 @@
     Route::get('/admin/register','Admin\AdminController@getRegister');
     Route::post('/admin/register','Admin\RegisterController@register');
     Route::post('/admin/registerother','Admin\RegisterController@registerother');
-    Route::get('/confirm/{email}-{token}','Admin\RegisterController@comfirm');
+    Route::get('/admin/confirm/{email}-{token}','Admin\RegisterController@comfirm');
     Route::get('/exitadmin','Admin\RegisterController@exitadmin');
     Route::get('/admin/users','Admin\AdminController@admins');
     Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
@@ -35,8 +35,10 @@
     Route::post('/admin/addtelefon','Admin\LogoController@addtelefon');
     
 /*Products*/
+    Route::get('/admin/newproduct','Admin\ProductsController@newproduct');
     Route::get('/admin/products','Admin\ProductsController@products');
     Route::post('/admin/uploadcolor','Admin\ProductsController@uploadcolor');
     Route::post('/admin/uploadimage','Admin\ProductsController@uploadimage');
     Route::post('/admin/defaultupload','Admin\ProductsController@defaultupload');
     Route::post('/admin/save','Admin\ProductsController@save');
+    Route::post('/admin/delprodus','Admin\ProductsController@delprodus');

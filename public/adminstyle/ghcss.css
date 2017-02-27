@@ -34,15 +34,6 @@ colors{
     text-align: center;
     padding: 5px;
 }
-.add-produs{
-    float: right;
-}
-.delete-produs{
-    color: red;
-}
-.afis-produs{
-    width: 50%;
-}
 #a{
     float: left;
     width: 45%;

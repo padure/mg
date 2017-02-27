@@ -7,11 +7,22 @@ use App\Http\Controllers\Controller;
 use DB;
 use Carbon\Carbon;
 use File;
+use App\Products;
 
 class ProductsController extends Controller
 {
-    public function products(){
-        return view("admin.products");
+    public function products(Products $products){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $result=$products->getProductsForAdmin();
+        return view("admin.products",["post"=>$result]);
+    }
+    public function newproduct(){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        return view("admin.newproduct");
     }
     public function save(Request $request){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
@@ -34,6 +45,13 @@ class ProductsController extends Controller
             $allmarims[]=["product_id"=>$id,"marime"=>$marimi[$i]];
         }
         DB::table("marimi")->insert($allmarims);
+    }
+    public function delprodus(Request $request ,Products $products){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        $products->deleteProdus($id);
     }
     public function defaultupload(Request $request){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
