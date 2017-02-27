@@ -81,6 +81,35 @@
         <input type="file" name="file" style="display:none;"><br>
     </label>
 </form>
+<div class="col-md-12">
+    <div class="col-md-12">
+        <h3>Produse</h3>
+    </div>
+    <div class="col-md-12">
+        <button class="btn btn-primary add-produs">
+            <span class="glyphicon glyphicon-plus"></span>
+            Adauga Produs
+        </button>
+    </div>
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th><th>Imagine</th><th>Culorile</th><th>Marimea</th><th>Pretul</th><th>Caracteristica</th><th>Setari</th>
+            </tr>
+            <tr>
+                <td>1</td><td><img src="{{asset('images/sac.jpg')}}" class="img-responsive afis-produs"/></td>
+                <td>
+                    <img src="{{asset('images/color1.jpg')}}" class="img-responsive" id="a">
+                    <img src="{{asset('images/sac.jpg')}}" class="img-responsive" id="a">
+                </td>
+                <td><p>X</p></td><td>130 lei</td><td><p>Caracteristici</p></td>
+            <td><a href="#"><span class="glyphicon glyphicon-cog"></span>Modifica</a>  
+                <a class="delete-produs"href="#"><span class="glyphicon glyphicon-remove"></span>Sterge</a>
+            </td>
+            </tr>
+        </table>
+    </div>
+</div>
 <script>
     var button;
     var global=0;
