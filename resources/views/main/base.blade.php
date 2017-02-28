@@ -19,7 +19,7 @@
         });
         </script>
     </head>
-    <body>
+    <body style="">
         <div class="container">
             <div class="row">
                 @include('main.meniu')

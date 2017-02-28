@@ -10,6 +10,7 @@ and open the template in the editor.
 .content{
     float:left;
     width: 100%;
+    background-color: white;
 }
 .social{
     float:right;
