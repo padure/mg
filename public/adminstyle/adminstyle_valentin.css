@@ -23,4 +23,6 @@ and open the template in the editor.
 .proprietati .btn{
     margin-top: 5px;
 }
-
+p[name=stergecolor]{
+    margin:3px;
+}
