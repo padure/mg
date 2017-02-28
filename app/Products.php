@@ -21,7 +21,7 @@ class Products extends Model
         foreach($return as $key=>$i){
             $arr[$i->product_id]["product"] = $i;
             $arr[$i->product_id]["colors"][$i->color_id]= $i;
-            $arr[$i->product_id]["marimi"][$i->marimi_id]= $i;
+            $arr[$i->product_id]["marimi"][$i->marimi_id]= $i; 
         }
         return $arr;
     }

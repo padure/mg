@@ -9,6 +9,6 @@ class MainController extends Controller
 {
     public function main(Products $products){
         $produse=$products->getAllProducts();
-        return view("main.base",["products"=>$produse]);
+        return view("main.base",["products"=>$produse]); 
     }
 }

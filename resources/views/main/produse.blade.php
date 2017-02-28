@@ -12,7 +12,7 @@
                 }
                 $nr++;
             ?>
-        ">
+        "> 
             <div class="row">
                 <div class="col-md-3" style="padding-left: 0px;">
                     <img src="{{asset($i['product']->image)}}" class="img-responsive"/>

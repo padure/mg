@@ -71,7 +71,7 @@ class ProductsController extends Controller
     public function updateprodus(Request $request,  Products $products){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");
-        }
+        } 
         $imagine=$request->imagine;
         $price=$request->price;
         $description=$request->description;

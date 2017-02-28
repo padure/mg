@@ -158,7 +158,7 @@
                 $("#save").button("loading");
                 $.ajax({  
                     type: 'POST',  
-                    url: '{{ URL("/admin/updateprodus") }}', 
+                    url: '{{ URL("/admin/updateprodus") }}',  
                     data: 
                         { 
                             imagine:imagine,
