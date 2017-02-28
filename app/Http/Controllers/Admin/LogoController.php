@@ -38,6 +38,17 @@ class LogoController extends Controller
             DB::table("logo")->where("variable","telefon")->update(["valuevariable"=>$request->telefon]);
         }
     }
+    public function addsocial(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        DB::table("social")->delete();
+        DB::table("social")->insert(["for"=>"fb","imagesocial"=>"allimages/system/fb.png","link"=>$request->fb]);
+        DB::table("social")->insert(["for"=>"ok","imagesocial"=>"allimages/system/ok.png","link"=>$request->ok]);
+        DB::table("social")->insert(["for"=>"instagram","imagesocial"=>"allimages/system/instagram.png","link"=>$request->instagram]);
+        DB::table("social")->insert(["for"=>"vk","imagesocial"=>"allimages/system/vk.png","link"=>$request->vk]);
+        DB::table("social")->insert(["for"=>"skype","imagesocial"=>"allimages/system/skype.png","link"=>$request->skype]);
+    }
     public function uploadlogo(Request $request){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");

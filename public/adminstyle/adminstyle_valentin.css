@@ -26,3 +26,6 @@ and open the template in the editor.
 p[name=stergecolor]{
     margin:3px;
 }
+.socialicons img{
+    width: 30px;
+}
