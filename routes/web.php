@@ -11,6 +11,7 @@
 |
 /*Rutele Main*/
     Route::get('/','MainController@main');
+    Route::get('/abaut-livrare', 'MainController@livrare');
 
 
 /*Admin rutes*/
