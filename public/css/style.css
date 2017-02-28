@@ -8,6 +8,9 @@ and open the template in the editor.
     Author     : Padure Gheorghe
 */
 /*Title video*/
+body{
+    background-image: URL("../images/video.jpg");
+}
 .title-description{
     
     padding: 50px;
@@ -32,7 +35,6 @@ and open the template in the editor.
 .video{
     padding-top: 25px;
     padding-bottom: 50px;
-    background-image: URL("../images/video.jpg")
 }
 .contacts-info{
     border: 1px solid gray;
@@ -101,7 +103,6 @@ and open the template in the editor.
     padding: 50px;
 }
 .fundal{
-    background-image: URL("../images/video.jpg");
 }
 .produs{
     background-color: white;
