@@ -92,7 +92,13 @@ body{
     border: 4px solid #216a94;
 }
 .livrare-icon{
-    
+    width: 40%;
+    padding: 20px;
+}
+.title-l{
+    color: green;
+    font-size: 20px;
+    padding: 10px;
 }
 /*Footer*/
 .footer{
