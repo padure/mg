@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-3">
         <h2>
-            079 99 99 99
+           <span class="glyphicon glyphicon-earphone"></span> 079 99 99 99
         </h2>
     </div>
     <div class="col-md-3">

@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-6 title-pub">
         <h2 class="intoarce-l">Intoarcere si Schimb</h2>
-        <img src="{{asset('images/intoarce.png')}}" alt="" class="img-responsive livrare-icon">
+        <img src="{{asset('images/intoarce.png')}}" alt="" class="img-responsive" style="padding: 0; width: 40%;">
         <p class="description-l intoarce-l">Nu va placut sau nu va incaput dupa marime? Inreegistram intoarceerea sau schimbul gratis, fara birocratii!</p>
         <u><a href="{{URL("/abaut-livrare")}}" class="abaut-l">Afla mai mult</a></u>
     </div>
