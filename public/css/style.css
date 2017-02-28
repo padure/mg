@@ -116,14 +116,45 @@ body{
 }
 .font{
     background-color: white;
+    padding: 0;
 }
 .font li{
     font-size: 22px;
+}
+.font h1{
+    padding: 20px;
+    background-color: #80d4ff;
+    color: white;
+    margin: 0;
 }
 .title-l{
     color: green;
     font-size: 20px;
     padding: 10px;
+}
+.desc-liv{
+    background-color: gray;
+    color: white;
+    padding: 25px;
+}
+.atentie{
+    background-color: #cce6ff;
+}
+.atentie .img-l{
+    padding: 30px;    
+}
+.atentie-t p{
+    font-size: 32px;
+    color: green;
+    padding: 15px;
+    padding-left: 0;
+}
+.atentie-d p{
+    font-size: 26px;
+    color: gray;
+}
+.padding{
+    margin-bottom: 40px;
 }
 /*Footer*/
 .footer{
