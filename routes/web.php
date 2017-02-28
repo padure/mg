@@ -43,4 +43,5 @@
     Route::post('/admin/uploadimage','Admin\ProductsController@uploadimage');
     Route::post('/admin/defaultupload','Admin\ProductsController@defaultupload');
     Route::post('/admin/save','Admin\ProductsController@save');
+    Route::post('/admin/updateprodus','Admin\ProductsController@updateprodus');
     Route::post('/admin/delprodus','Admin\ProductsController@delprodus');
