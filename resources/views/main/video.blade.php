@@ -22,7 +22,7 @@
         <div class="col-md-12 form">
             <p>Form</p>
             <input type="text" class="form-control" placeholder="Telefon"/>
-            <input type="e-mail" class="form-control" placeholder="E - mail" />
+            <input type="text" class="form-control" placeholder="Nume, Prenume" />
             <button class="btn btn-primary form-control"><span class="glyphicon glyphicon-earphone"></span> Telefonati</button>
         </div>
     </div>
