@@ -56,7 +56,6 @@ class ProductsController extends Controller
         $marimi=$request->marimi;
         $colors=$request->colors;
         $imagecolors=$request->imagecolors;
-        $products->deleteProdus($request->idproduct);
         $id=DB::table("products")->insertGetId(["image"=>$imagine,"price"=>$price,"description"=>$description]);
         $allcolors=[];
         for($i=0;$i< count($colors);$i++){
@@ -66,6 +65,31 @@ class ProductsController extends Controller
         $allmarims=[];
         for($i=0;$i< count($marimi);$i++){
             $allmarims[]=["product_id"=>$id,"marime"=>$marimi[$i]];
+        }
+        DB::table("marimi")->insert($allmarims);
+    }
+    public function updateprodus(Request $request,  Products $products){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        } 
+        $imagine=$request->imagine;
+        $price=$request->price;
+        $description=$request->description;
+        $marimi=$request->marimi;
+        $colors=$request->colors;
+        $imagecolors=$request->imagecolors;
+        $produs_id=$request->idproduct;
+        DB::table("colors")->where("product_id",$produs_id)->delete();
+        DB::table("marimi")->where("product_id",$produs_id)->delete();
+        DB::table("products")->where("product_id",$produs_id)->update(["image"=>$imagine,"price"=>$price,"description"=>$description]);
+        $allcolors=[];
+        for($i=0;$i< count($colors);$i++){
+            $allcolors[]=["product_id"=>$produs_id,"color"=>$colors[$i],"image_color"=>$imagecolors[$i]];
+        }
+        DB::table("colors")->insert($allcolors);
+        $allmarims=[];
+        for($i=0;$i< count($marimi);$i++){
+            $allmarims[]=["product_id"=>$produs_id,"marime"=>$marimi[$i]];
         }
         DB::table("marimi")->insert($allmarims);
     }

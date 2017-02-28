@@ -27,7 +27,7 @@
     Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
     Route::get('/admin/reset','Admin\AdminController@reset');
     Route::post('/admin/reset','Admin\RegisterController@sendemail');
-    Route::post('/admin/setcode','Admin\RegisterController@setcode');
+    Route::post('/admin/setcode','Admin\RegisterController@setcode'); 
     Route::post('/admin/newpass','Admin\RegisterController@newpass');
 /*Meniu*/
     Route::get('/admin/logo','Admin\LogoController@logo');
@@ -44,4 +44,5 @@
     Route::post('/admin/uploadimage','Admin\ProductsController@uploadimage');
     Route::post('/admin/defaultupload','Admin\ProductsController@defaultupload');
     Route::post('/admin/save','Admin\ProductsController@save');
+    Route::post('/admin/updateprodus','Admin\ProductsController@updateprodus');
     Route::post('/admin/delprodus','Admin\ProductsController@delprodus');
