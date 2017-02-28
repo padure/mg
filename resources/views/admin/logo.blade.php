@@ -70,8 +70,92 @@
         </div>
     </form>
 </div>
+<div class="clearfix"></div>
+
+<form class="form-inline socialicons" name="social">
+    <div class="form-group">
+        <label for="fb">
+            <img src="{{asset('allimages/system/fb.png')}}"/>
+        </label>
+        @if(!empty($post['social'][0]) && count($post['social'][0])>0)
+            <input type="text" class="form-control" name="fb" placeholder="FaceBook" value="{{$post['social'][0]->link}}">
+        @else
+            <input type="text" class="form-control" name="fb" placeholder="FaceBook">
+        @endif
+    </div>
+    <div class="form-group">
+        <label for="ok">
+            <img src="{{asset('allimages/system/ok.png')}}"/>
+        </label>
+        @if(!empty($post['social'][1]) && count($post['social'][1])>0)
+            <input type="text" class="form-control" name="ok" placeholder="Odnoklassniki" value="{{$post['social'][1]->link}}">
+        @else
+            <input type="text" class="form-control" name="ok" placeholder="Odnoklassniki">
+        @endif
+    </div>
+    <div class="form-group">
+        <label for="instagram">
+            <img src="{{asset('allimages/system/instagram.png')}}"/>
+        </label>
+        @if(!empty($post['social'][2]) && count($post['social'][2])>0)
+            <input type="text" class="form-control" name="instagram" placeholder="Instagram" value="{{$post['social'][2]->link}}">
+        @else
+            <input type="text" class="form-control" name="instagram" placeholder="Instagram">
+        @endif
+    </div>
+    <div class="form-group">
+        <label for="vk">
+            <img src="{{asset('allimages/system/vk.png')}}"/>
+        </label>
+        @if(!empty($post['social'][3]) && count($post['social'][3])>0)
+            <input type="text" class="form-control" name="vk" placeholder="Bkontakte" value="{{$post['social'][3]->link}}">
+        @else
+            <input type="text" class="form-control" name="vk" placeholder="Bkontakte">
+        @endif
+        
+    </div>
+    <div class="form-group">
+        <label for="skype">
+            <img src="{{asset('allimages/system/skype.png')}}"/>
+        </label>
+        @if(!empty($post['social'][4]) && count($post['social'][4])>0)
+            <input type="text" class="form-control" name="skype" placeholder="Skype" value="{{$post['social'][4]->link}}">
+        @else
+            <input type="text" class="form-control" name="skype" placeholder="Skype">
+        @endif
+        
+    </div>
+    <button type="submit" id="socialbutton" class="btn btn-primary" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se salveaza">
+        Salveaza
+    </button>
+    <label id="salvatsocial" class="text-success"></label>
+</form>
+
 <script>
     $(document).ready(function(){
+        $("form[name=social]").on("submit",function(e){
+            e.preventDefault();
+            $("#socialbutton").button("loading");
+            $.ajax({
+                type:'POST',
+                url: "{{URL('/admin/addsocial')}}",
+                data:{
+                    fb:$("input[name=fb]").val(),
+                    ok:$("input[name=ok]").val(),
+                    instagram:$("input[name=instagram]").val(),
+                    vk:$("input[name=vk]").val(),
+                    skype:$("input[name=skype]").val()
+                },
+                success:function(){
+                    $("#socialbutton").button("reset");
+                    $("#salvatsocial").text("Sa salvat");
+                },
+                error:function(){
+                    location.reload();
+                }
+            });
+            
+        });
         $("form[name=numartelefon]").on("submit",function(e){
             e.preventDefault();
             $("#nrtel").button("loading");

@@ -33,6 +33,7 @@
     Route::post('/admin/uploadlogo','Admin\LogoController@uploadlogo');
     Route::post('/admin/addoredelucru','Admin\LogoController@addoredelucru');
     Route::post('/admin/addtelefon','Admin\LogoController@addtelefon');
+    Route::post('/admin/addsocial','Admin\LogoController@addsocial');
     
 /*Products*/
     Route::get('/admin/products','Admin\ProductsController@products');
