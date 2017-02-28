@@ -34,7 +34,7 @@
                             {{$i["product"]->price}}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-primary">
+                            <a href="{{URL('admin/modproduct/'.$i["product"]->product_id)}}" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-cog"></span>
                                 Modifica
                             </a>  

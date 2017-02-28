@@ -1,16 +1,5 @@
 @extends("admin.base")
 @section("content")
-<style>
-    .colorclass{
-        padding:0px;
-        height: 40px;
-        overflow: hidden;
-    }
-    .imageclass{
-        height: 40px;
-        overflow: hidden;
-    }
-</style>
 <div class="container">
     <div class="col-md-12 admin-produse">
         <div class="col-md-4">
@@ -241,7 +230,7 @@
         $(this).remove();
         $("#m"+id).remove();
     });
-    $("body").on("click","span[name=stergecolor]",function(){
+    $("body").on("click","p[name=stergecolor]",function(){
         var id=$(this).attr("id");
         $(this).remove();
         $("#a"+id).remove();
@@ -261,7 +250,7 @@
             processData: false,
             success:function(data){
                 if(data.succes===true){
-                    $("#allcolors").append("<p><span id='"+global+"' name='stergecolor'>Sterge</span></p>\n\
+                    $("#allcolors").append("<p id='"+global+"' name='stergecolor'><span>Sterge</span></p>\n\
                                             <div id='a"+global+"'>\n\
                                                 <div class='col-md-6 colorclass'>\n\
                                                     <img src='{{asset('/')}}"+data.image+"' class='img-responsive'/>\n\

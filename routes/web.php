@@ -35,8 +35,9 @@
     Route::post('/admin/addtelefon','Admin\LogoController@addtelefon');
     
 /*Products*/
-    Route::get('/admin/newproduct','Admin\ProductsController@newproduct');
     Route::get('/admin/products','Admin\ProductsController@products');
+    Route::get('/admin/newproduct','Admin\ProductsController@newproduct');
+    Route::get('/admin/modproduct/{id}','Admin\ProductsController@modproduct');
     Route::post('/admin/uploadcolor','Admin\ProductsController@uploadcolor');
     Route::post('/admin/uploadimage','Admin\ProductsController@uploadimage');
     Route::post('/admin/defaultupload','Admin\ProductsController@defaultupload');

@@ -7,4 +7,20 @@ and open the template in the editor.
     Created on : Feb 21, 2017, 5:18:55 PM
     Author     : valintin
 */
+.colorclass{
+    padding:0px;
+    height: 40px;
+    overflow: hidden;
+}
+.imageclass{
+    height: 40px;
+    overflow: hidden;
+}
+.proprietati span{
+    cursor:pointer;
+    color:#0065b5;
+}
+.proprietati .btn{
+    margin-top: 5px;
+}
 

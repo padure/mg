@@ -24,7 +24,29 @@ class ProductsController extends Controller
         }
         return view("admin.newproduct");
     }
-    public function save(Request $request){
+    public function modproduct($id){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $result=DB::table("products")
+                            ->select("products.*","colors.color_id","colors.color","colors.image_color","marimi.marimi_id","marimi.marime")
+                            ->leftJoin("colors",function($join){
+                                $join->on('colors.product_id', '=', 'products.product_id');
+                            })
+                            ->leftJoin("marimi",function($join){
+                                $join->on('marimi.product_id', '=', 'products.product_id');
+                            })
+                            ->where("products.product_id",$id)
+                            ->get();
+        $arr=[];
+        foreach($result as $key=>$i){
+            $arr["product"]=$i;
+            $arr["colors"][$i->color_id]=$i;
+            $arr["marimi"][$i->marimi_id]=$i;
+        }
+        return view("admin.modproduct",["post"=>$arr]);
+    }
+    public function save(Request $request,  Products $products){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");
         }
@@ -34,6 +56,7 @@ class ProductsController extends Controller
         $marimi=$request->marimi;
         $colors=$request->colors;
         $imagecolors=$request->imagecolors;
+        $products->deleteProdus($request->idproduct);
         $id=DB::table("products")->insertGetId(["image"=>$imagine,"price"=>$price,"description"=>$description]);
         $allcolors=[];
         for($i=0;$i< count($colors);$i++){
