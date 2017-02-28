@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content menu">
     <div class="col-md-2"> 
         <a href="{{URL("/")}}"> 
             <img src="{{asset("allimages/logo.png")}}" class="img-responsive"/>
