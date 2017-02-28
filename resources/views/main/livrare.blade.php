@@ -1,29 +1,9 @@
-<!DOCTYPE html> 
-<html> 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Magazin</title>
-        <script src="{{ asset("js/jquery.min.js") }}"></script>
-        <script src="{{ asset("js/bootstrap.min.js") }}"></script>
-        <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
-        <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
-        <link href="{{ asset("css/style_valentin.css") }}" rel="stylesheet" >
-        <link href="{{ asset("css/bootstrap-theme.min.css") }}" rel="stylesheet" type="text/css">
-        <!-- token-->
-        <meta name="_token" content="{!! csrf_token() !!}"/>
-        <script type="text/javascript">
-        $.ajaxSetup({
-           headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-        });
-        </script>
-    </head>
-    <body style="">
-        <div class="container">
-            <div class="row">
-                @include('main.meniu')
-                <div class="col-md-12 font">
+@extends('main.primarybase')
+@section('content')
+<div class="container">
+    <div class="row">
+        @include('main.meniu')
+        <div class="col-md-12 font">
                     <div class="col-md-12">
                         <h1>Возврат или обмен товара</h1>
                         <p class="liv-description">Возврат и обмен приобретенной у нас бескаркасной мебели и других товаров осуществляется быстро и
@@ -40,9 +20,22 @@
                             Как видите, покупать в BeriMeshok кресла-мешки не только дешево но и безопасно.</li>
                         </ul>
                     </div>
-                </div
-                @include('main.footer')
+            <div class="col-md-12 font">
+                <div class="col-md-12">
+                    <h2>Для обмена товара на алогичный с другой расцветкой, Вам достаточно привезти к нам внешний съемный чехол, который легко
+                    умещается в сумку или рюкзак!</h2>   
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <img src="{{asset('images/intoarce.png')}}" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+        @include('main.footer')
+    </div>
+</div>
+@endsection
