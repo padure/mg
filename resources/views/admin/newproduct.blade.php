@@ -55,7 +55,7 @@
         </div>
         <div class="col-md-4">
             <b>Introduceti caracteristici: </b>
-            <textarea rows="7" cols="49" class="form-control" name="description"></textarea>
+            <textarea rows="18" cols="50" class="form-control" name="description"></textarea>
         </div>
     </div>
     <button class="submit btn btn-success" id="save" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se incarca">
