@@ -16,6 +16,7 @@ class Products extends Model
                     ->leftJoin("marimi",function($join){
                         $join->on('marimi.product_id', '=', 'products.product_id');
                     })
+                    ->orderBy("products.product_id")
                     ->get();
         $arr=[];
         foreach($return as $key=>$i){

@@ -30,10 +30,15 @@ and open the template in the editor.
     margin-top:20px;
 }
 .culoare{
-    width: 30px; 
-    height: 30px; 
+    width: 35px;
+    height: 35px; 
     float:left;
+    cursor:pointer;
     margin-top:10px;
+}
+.culoare:hover{
+    border: 3px solid #f48420;
+    border-radius:3px;
 }
 .culoare img{
     width: 100%;
@@ -45,13 +50,24 @@ and open the template in the editor.
     float:left;
 }
 .marime{
-    width: 30px; 
-    height: 30px; 
-    margin-top:20px;
+    width: 35px;
+    height: 35px;
+    line-height: 25px;
+    margin-top:10px;
     border:1px solid gray;
     text-align: center;
     padding-top:3px;
-    font-size:17px;
+    font-size:14px;
+    font-weight: bold;
+    cursor:pointer
+}
+.marime:hover{
+    border: 3px solid #f48420;
+    border-radius:3px;
+}
+.active_color{
+    border: 3px solid #f48420;
+    border-radius:3px;
 }
 .pret{
     margin-top: 75%;
