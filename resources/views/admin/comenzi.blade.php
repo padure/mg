@@ -19,10 +19,10 @@
                 <th>
                     Marime
                 </th>
-                <th>
+                <th style="width: 100px;">
                     Culoare
                 </th>
-                <th>
+                <th style="width: 100px;">
                     Produs
                 </th>
                 <th>
@@ -59,7 +59,11 @@
                     200 lei
                 </td>
                 <td>
-                    <a class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</a>
+                    20-06-2017
+                    <a class="btn btn-danger pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        Sterge
+                    </a>
                 </td>
             </tr>
             @endfor
