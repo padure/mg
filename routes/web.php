@@ -46,3 +46,6 @@
     Route::post('/admin/save','Admin\ProductsController@save');
     Route::post('/admin/updateprodus','Admin\ProductsController@updateprodus');
     Route::post('/admin/delprodus','Admin\ProductsController@delprodus');
+    
+/*Comenzi*/
+    Route::get('/admin/comenzi','Admin\ComenziController@comenzi');
