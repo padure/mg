@@ -35,6 +35,8 @@
     Route::post('/admin/addoredelucru','Admin\LogoController@addoredelucru');
     Route::post('/admin/addtelefon','Admin\LogoController@addtelefon');
     Route::post('/admin/addsocial','Admin\LogoController@addsocial');
+    Route::post('/admin/adddescrierea','Admin\LogoController@adddescrierea');
+     Route::post('/admin/addvideo','Admin\LogoController@addvideo');
     
 /*Products*/
     Route::get('/admin/products','Admin\ProductsController@products');

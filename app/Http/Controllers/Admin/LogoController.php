@@ -11,6 +11,28 @@ use File;
 
 class LogoController extends Controller
 {
+    public function addvideo(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $video = DB::table("logo")->where("variable","video")->first();
+        if(is_null($video)){
+            DB::table("logo")->insert(["variable"=>"video","valuevariable"=>$request->video]);
+        }else{
+            DB::table("logo")->where("variable","video")->update(["valuevariable"=>$request->video]);
+        }
+    }
+    public function adddescrierea(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $descrierea = DB::table("logo")->where("variable","descrierea")->first();
+        if(is_null($descrierea)){
+            DB::table("logo")->insert(["variable"=>"descrierea","valuevariable"=>$request->descrierea]);
+        }else{
+            DB::table("logo")->where("variable","descrierea")->update(["valuevariable"=>$request->descrierea]);
+        }
+    }
     public function logo(Logo $logo){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");

@@ -130,9 +130,81 @@
     </button>
     <label id="salvatsocial" class="text-success"></label>
 </form>
-
+<div class="clearfix"></div>
+<br>
+<form name="descrierea">
+    <label>Descrierea siteului</label>
+    <div class="form-group">
+        @if(!empty($post['descrierea']) && count($post['descrierea'])>0)
+            <input type="text" class="form-control" name="descrierea" placeholder="text" value="{{$post['descrierea']->valuevariable}}"/>
+        @else
+            <input type="text" class="form-control" name="descrierea" placeholder="text"/>
+        @endif
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" id="descrierea" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se salveaza">
+            Salveaza
+        </button>
+        <br>
+        <label id="salvatdescrierea" class="text-success"></label>
+    </div>
+</form>
+<div class="clearfix"></div>
+<form name="video">
+    <label>Video link youtube</label>
+    <div class="form-group">
+        @if(!empty($post['video']) && count($post['video'])>0)
+            <input type="text" class="form-control" name="video" placeholder="text" value="{{$post['video']->valuevariable}}"/>
+        @else
+            <input type="text" class="form-control" name="video" placeholder="text"/>
+        @endif
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" id="video" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se salveaza">
+            Salveaza
+        </button>
+        <br>
+        <label id="salvatvideo" class="text-success"></label>
+    </div>
+</form>
 <script>
     $(document).ready(function(){
+        $("form[name=video]").on("submit",function(e){
+            e.preventDefault();
+            $("#video").button("loading");
+            $.ajax({
+                type:'POST',
+                url: "{{URL('/admin/addvideo')}}",
+                data:{
+                    video:$("input[name=video]").val()
+                },
+                success:function(){
+                    $("#video").button("reset");
+                    $("#salvatvideo").text("Sa salvat");
+                },
+                error:function(){
+                    location.reload();
+                }
+            });
+        });
+        $("form[name=descrierea]").on("submit",function(e){
+            e.preventDefault();
+            $("#descrierea").button("loading");
+            $.ajax({
+                type:'POST',
+                url: "{{URL('/admin/adddescrierea')}}",
+                data:{
+                    descrierea:$("input[name=descrierea]").val()
+                },
+                success:function(){
+                    $("#descrierea").button("reset");
+                    $("#salvatdescrierea").text("Sa salvat");
+                },
+                error:function(){
+                    location.reload();
+                }
+            });
+        });
         $("form[name=social]").on("submit",function(e){
             e.preventDefault();
             $("#socialbutton").button("loading");
@@ -154,7 +226,6 @@
                     location.reload();
                 }
             });
-            
         });
         $("form[name=numartelefon]").on("submit",function(e){
             e.preventDefault();

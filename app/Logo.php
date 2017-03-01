@@ -12,6 +12,8 @@ class Logo extends Model
         $ore=DB::table('logo')->where("variable","ore")->get();
         $nrtel=DB::table('logo')->where("variable","telefon")->first();
         $social=DB::table('social')->get();
-        return ["logo"=>$logo,"ore"=>$ore,"nrtel"=>$nrtel,"social"=>$social];
+        $descrierea=DB::table('logo')->where("variable","descrierea")->first();
+        $video=DB::table('logo')->where("variable","video")->first();
+        return ["logo"=>$logo,"ore"=>$ore,"nrtel"=>$nrtel,"social"=>$social,"descrierea"=>$descrierea,"video"=>$video];
     }
 }
