@@ -11,10 +11,14 @@ and open the template in the editor.
 body{
     background-image: URL("../images/video.jpg");
 }
+.calibri{
+    font-family: Calibri !important;
+}
 .title-description{
-    
-    padding: 50px;
-    background-color: #216a94;
+    padding: 20px;
+    text-align: center;
+    background: rgb(10, 63, 103);
+    background: rgba(10, 63, 103, .8);
     color: white;
     text-transform: uppercase;
     font-size: 26px;
@@ -49,16 +53,14 @@ body{
 /*Description*/
 .description{
     border-top: none;
-    padding-top: 50px;
-    padding-bottom: 50px;
     background-image: URL("../images/sac.jpg");
     background-size: 100%;
 }
 .info-description{
-    border: 1px solid #216a94;
-    background-color: #216a94;
+    background: rgb(54, 25, 25); 
+    background: rgba(54, 25, 25, .5);
     color: white;
-    padding: 50px;
+    padding:10px 0px 10px 10px;
 }
 
 .description-img{

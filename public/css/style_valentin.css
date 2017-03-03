@@ -72,6 +72,8 @@ and open the template in the editor.
 .pret{
     margin-top: 75%;
     margin-bottom: 0px;
+    font-weight: bold;
+    color: #5cb956;
     float: left;
     font-size: 30px;
 }

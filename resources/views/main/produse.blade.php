@@ -43,7 +43,7 @@
 
                 <div class="col-md-7 col-sm-10 col-xs-12">
                     <div class="col-md-6 col-xs-6 hidden-sm hidden-xs">
-                        <p class="pret" id="price{{$i['product']->product_id}}">
+                        <p class="pret calibri" id="price{{$i['product']->product_id}}">
                             @if(!empty($i['marimi']) && count($i['marimi'])>0)
                                 @foreach($i['marimi'] as $keymarimi=>$imarimi)
                                     {{$imarimi->price}}
