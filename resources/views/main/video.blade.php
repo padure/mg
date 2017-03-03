@@ -4,21 +4,22 @@
         Title - Deescription the this site MG
     </p>
 </div> 
-<div class="col-md-12">
-    <div class="col-md-6">
-        <video width="100%" controls>
-            <source src="video/sp1.mp4" type="video/mp4">
-            <source src="mov_bbb.ogg" type="video/ogg">
-        </video>
+<div class="content">
+    <div class="col-md-8">
+        <iframe width="100%" height="450px" 
+                src="http://www.youtube.com/embed/GRonxog5mbw?autoplay=1&loop=1&playlist=GRonxog5mbw" 
+                frameborder="0" 
+                allowfullscreen>
+        </iframe>​
     </div>
-    <div class="col-md-6 contacts-info contacts-margin">
+    <div class="col-md-4 contacts-info contacts-margin">
         <div class="col-md-12">
             <p class="title-contacts">
                 Text - description for contacts
             </p>
         </div>
     </div>
-    <div class="col-md-6 contacts-info">
+    <div class="col-md-4 contacts-info">
         <div class="col-md-12 form">
             <p>Form</p>
             <input type="text" class="form-control" placeholder="Telefon"/>
