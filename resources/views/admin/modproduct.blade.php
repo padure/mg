@@ -65,6 +65,7 @@
                                     <div class='col-md-4' id='m{{$globalmarime}}'>
                                         <span name='stergemarime' id='{{$globalmarime}}'>Sterge</span>
                                         <input type='text' name='marims' class='form-control' placeholder='XL' value="{{$i->marime}}"/>
+                                        <input type='text' name='price' class='form-control' placeholder='100 $' value="{{$i->price}}"/>
                                     </div>
                                     <?php $globalmarime++;?>
                                 @endif
@@ -75,18 +76,28 @@
                         <button class="btn btn-info" id="addmarimi">Adauga marime</button>
                     </div>
                 </div>
-                <div class="col-md-12 pret">
-                    <div class="col-md-12">
-                        <b>Introduceti pretul: </b>
-                    </div>
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" id="price" placeholder="100 $ " value="{{$post["product"]->price}}"/>
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 proprietati">
                 <b>Introduceti caracteristici: </b>
-                <textarea rows="7" cols="49" class="form-control" name="description">{{$post["product"]->description}}</textarea>
+                <div class="content" id="caracteristicile">
+                    @if(!empty($post["caracteristici"]) && count($post["caracteristici"])>0)
+                            <?php $caracteristici=0;?>
+                            @foreach($post["caracteristici"] as $key =>$i)
+                                @if(!empty($key))
+                                        <div class='col-md-12' id='d{{$caracteristici}}'>
+                                            <span name='stergecaracteristici' id='{{$caracteristici}}'>Sterge</span>
+                                            <input type='text' name='caracteristici' class='form-control' placeholder='abc' value="{{$i->caracteristica}}"/>
+                                       </div>
+                                    <?php $caracteristici++;?>
+                                @endif
+                            @endforeach
+                        @endif
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-info" id="addcaracteristici">
+                        Adauga caracteristica
+                    </button>
+                </div>
             </div>
         </div>
         <button class="submit btn btn-success" id="save" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se incarca">
@@ -106,15 +117,16 @@
         var global="{{$global}}";
         var globalmarime="{{$globalmarime}}";
         var image="{{$post['product']->image}}";
+        var caracteristici="{{$caracteristici}}";
         var idproduct="{{$post['product']->product_id}}";
         $("#save").on("click",function(e){
             var permit=true;
             var colors=[];
             var imagecolors=[];
             var marimi=[];
-            var price=$("#price").val();
+            var caracteristici=[];
+            var price=[];
             var imagine=image;
-            var description=$("textarea[name=description]").val();
             $("input[name=colorandimage]").each(
                 function(index,val)
                 {  
@@ -125,6 +137,19 @@
                     }else{
                         colors[index]=$(val).attr('valuec');
                         imagecolors[index]=$(val).attr('valuei');
+                    }
+                }
+            );
+            $("input[name=caracteristici]").each(
+                function(index,val)
+                {  
+                    var value = $(val).val();
+                    if(value.length===0 || value.length>100){
+                        $(val).css("border-color","red");
+                        permit=false;
+                    }else{
+                        $(val).css("border-color","#ccc");
+                        caracteristici[index]=value;
                     }
                 }
             );
@@ -141,13 +166,19 @@
                     }
                 }
             );
-            if(price.length===0){
-                $("#price").focus();
-                $("#price").css("border-color","red");
-                permit=false;
-            }else{
-                $("#price").css("border-color","#ccc");
-            }
+            $("input[name=price]").each(
+                function(index,val)
+                {  
+                    var value = $(val).val();
+                    if(value.length===0 || value.length>100){
+                        $(val).css("border-color","red");
+                        permit=false;
+                    }else{
+                        $(val).css("border-color","#ccc");
+                        price[index]=value;
+                    }
+                }
+            );
             if(imagine.length===0){
                 permit=false;
                 $("#defaultimagepreview").css("border-color","red");
@@ -158,7 +189,7 @@
                 $("#save").button("loading");
                 $.ajax({  
                     type: 'POST',  
-                    url: '{{ URL("/admin/updateprodus") }}',  
+                    url: '{{ URL("/admin/updateprodus") }}', 
                     data: 
                         { 
                             imagine:imagine,
@@ -166,7 +197,7 @@
                             imagecolors:imagecolors,
                             marimi:marimi,
                             price:price,
-                            description:description,
+                            caracteristici:caracteristici,
                             idproduct:idproduct
                         },
                     success: function(data) {
@@ -180,10 +211,23 @@
                 });
             }
         });
+        $("#addcaracteristici").on("click",function(){
+            $("#caracteristicile").append("<div class='col-md-12' id='d"+caracteristici+"'>\n\
+                                                <span name='stergecaracteristici' id='"+caracteristici+"'>Sterge</span>\n\
+                                                <input type='text' name='caracteristici' class='form-control' placeholder='abc'/>\n\
+                                           </div>");
+                    caracteristici++;
+        });
+        $("body").on("click","span[name=stergecaracteristici]",function(){
+            var id=$(this).attr("id");
+            $(this).remove();
+            $("#d"+id).remove();
+        });
         $("#addmarimi").on("click",function(){
             $("#marimile").append("<div class='col-md-4' id='m"+globalmarime+"'>\n\
                                         <span name='stergemarime' id='"+globalmarime+"'>Sterge</span>\n\
                                         <input type='text' name='marims' class='form-control' placeholder='XL'/>\n\
+                                        <input type='text' class='form-control' name='price' placeholder='100 $ '/>\n\
                                    </div>");
                 globalmarime++;
         });

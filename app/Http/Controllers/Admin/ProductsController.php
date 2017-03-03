@@ -29,12 +29,15 @@ class ProductsController extends Controller
             return redirect("/admin");
         }
         $result=DB::table("products")
-                            ->select("products.*","colors.color_id","colors.color","colors.image_color","marimi.marimi_id","marimi.marime")
+                            ->select("products.*","colors.color_id","colors.color","colors.image_color","marimi.marimi_id","marimi.marime","marimi.price","caracteristici.caracteristici_id","caracteristici.caracteristica")
                             ->leftJoin("colors",function($join){
                                 $join->on('colors.product_id', '=', 'products.product_id');
                             })
                             ->leftJoin("marimi",function($join){
                                 $join->on('marimi.product_id', '=', 'products.product_id');
+                            })
+                            ->leftJoin("caracteristici",function($join){
+                                $join->on('caracteristici.product_id', '=', 'products.product_id');
                             })
                             ->where("products.product_id",$id)
                             ->get();
@@ -43,6 +46,7 @@ class ProductsController extends Controller
             $arr["product"]=$i;
             $arr["colors"][$i->color_id]=$i;
             $arr["marimi"][$i->marimi_id]=$i;
+            $arr["caracteristici"][$i->caracteristici_id]=$i;
         }
         return view("admin.modproduct",["post"=>$arr]);
     }
@@ -52,11 +56,11 @@ class ProductsController extends Controller
         }
         $imagine=$request->imagine;
         $price=$request->price;
-        $description=$request->description;
+        $caracteristici=$request->caracteristici;
         $marimi=$request->marimi;
         $colors=$request->colors;
         $imagecolors=$request->imagecolors;
-        $id=DB::table("products")->insertGetId(["image"=>$imagine,"price"=>$price,"description"=>$description]);
+        $id=DB::table("products")->insertGetId(["image"=>$imagine]);
         $allcolors=[];
         for($i=0;$i< count($colors);$i++){
             $allcolors[]=["product_id"=>$id,"color"=>$colors[$i],"image_color"=>$imagecolors[$i]];
@@ -64,9 +68,14 @@ class ProductsController extends Controller
         DB::table("colors")->insert($allcolors);
         $allmarims=[];
         for($i=0;$i< count($marimi);$i++){
-            $allmarims[]=["product_id"=>$id,"marime"=>$marimi[$i]];
+            $allmarims[]=["product_id"=>$id,"marime"=>$marimi[$i],"price"=>$price[$i]];
         }
         DB::table("marimi")->insert($allmarims);
+        $allcaracteristici=[];
+        for($i=0;$i< count($caracteristici);$i++){
+            $allcaracteristici[]=["product_id"=>$id,"caracteristica"=>$caracteristici[$i]];
+        }
+        DB::table("caracteristici")->insert($allcaracteristici);
     }
     public function updateprodus(Request $request,  Products $products){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
@@ -74,14 +83,16 @@ class ProductsController extends Controller
         } 
         $imagine=$request->imagine;
         $price=$request->price;
-        $description=$request->description;
+        $caracteristici=$request->caracteristici;
         $marimi=$request->marimi;
         $colors=$request->colors;
         $imagecolors=$request->imagecolors;
+        
         $produs_id=$request->idproduct;
         DB::table("colors")->where("product_id",$produs_id)->delete();
         DB::table("marimi")->where("product_id",$produs_id)->delete();
-        DB::table("products")->where("product_id",$produs_id)->update(["image"=>$imagine,"price"=>$price,"description"=>$description]);
+        DB::table("caracteristici")->where("product_id",$produs_id)->delete();
+        DB::table("products")->where("product_id",$produs_id)->update(["image"=>$imagine]);
         $allcolors=[];
         for($i=0;$i< count($colors);$i++){
             $allcolors[]=["product_id"=>$produs_id,"color"=>$colors[$i],"image_color"=>$imagecolors[$i]];
@@ -89,9 +100,14 @@ class ProductsController extends Controller
         DB::table("colors")->insert($allcolors);
         $allmarims=[];
         for($i=0;$i< count($marimi);$i++){
-            $allmarims[]=["product_id"=>$produs_id,"marime"=>$marimi[$i]];
+            $allmarims[]=["product_id"=>$produs_id,"marime"=>$marimi[$i],"price"=>$price[$i]];
         }
         DB::table("marimi")->insert($allmarims);
+        $allcaracteristici=[];
+        for($i=0;$i< count($caracteristici);$i++){
+            $allcaracteristici[]=["product_id"=>$produs_id,"caracteristica"=>$caracteristici[$i]];
+        }
+        DB::table("caracteristici")->insert($allcaracteristici);
     }
     public function delprodus(Request $request ,Products $products){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){

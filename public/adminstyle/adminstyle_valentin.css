@@ -16,6 +16,9 @@ and open the template in the editor.
     height: 40px;
     overflow: hidden;
 }
+input[name=price]{
+    margin-top:5px;
+}
 .proprietati span{
     cursor:pointer;
     color:#0065b5;

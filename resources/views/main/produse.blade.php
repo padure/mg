@@ -32,7 +32,7 @@
                         <div class="locmarime">
                             @if(!empty($i['marimi']) && count($i['marimi'])>0)
                                 @foreach($i['marimi'] as $keymarimi=>$imarimi)
-                                    <div class="marime" name="marime" activemarime="{{$i['product']->product_id}}" marimi_id="{{$imarimi->marimi_id}}">
+                                    <div class="marime" name="marime" activemarime="{{$i['product']->product_id}}" marimi_id="{{$imarimi->marimi_id}}" price="{{$imarimi->price}}">
                                         {{$imarimi->marime}}
                                     </div>
                                 @endforeach
@@ -43,8 +43,13 @@
 
                 <div class="col-md-7 col-sm-10 col-xs-12">
                     <div class="col-md-6 col-xs-6 hidden-sm hidden-xs">
-                        <p class="pret">
-                            {{$i['product']->price}}
+                        <p class="pret" id="price{{$i['product']->product_id}}">
+                            @if(!empty($i['marimi']) && count($i['marimi'])>0)
+                                @foreach($i['marimi'] as $keymarimi=>$imarimi)
+                                    {{$imarimi->price}}
+                                    <?php break;?>
+                                @endforeach
+                            @endif
                         </p>
                         <button class="btn btn-primary suna" idprod="{{$i['product']->product_id}}" name="comanda">
                             Zacaji
@@ -59,7 +64,13 @@
                                 </button>
                             </span>
                             <div class="dropdown-menu">
-                                {!!$i['product']->description!!}
+                                @if(!empty($i['caracteristici']) && count($i['caracteristici'])>0)
+                                    @foreach($i['caracteristici'] as $keymarimi=>$icaracteristici)
+                                        <p>
+                                            {{$icaracteristici->caracteristica}}
+                                        </p>  
+                                    @endforeach
+                                @endif
                             </div>
                         </div>
                         <form class="form-horizontal form_trimite">
@@ -76,7 +87,7 @@
                     </div>
 
                     <div class="col-md-6 col-xs-12 visible-sm visible-xs">
-                        <p class="pret">
+                        <p class="pret" id="price{{$i['product']->product_id}}">
                             {{$i['product']->price}}
                         </p>
                         <button class="btn btn-primary suna" idprod="{{$i['product']->product_id}}" name="comanda">
@@ -101,6 +112,7 @@
         $("body").on("click","div[name=marime]",function(){
             var id=$(this).attr("activemarime");
             var idmarime=$(this).attr("marimi_id");
+            var price=$(this).attr("price");
             if($(this).hasClass( "active_color" ))
             {
                 $("div[activemarime="+id+"]").removeClass("active_color");
@@ -111,6 +123,7 @@
                 $(this).addClass("active_color");
                 $("#idcomanda"+id).attr("valuem",idmarime);
             }
+            $("#price"+id).html(price);
         });
         $("body").on("click","div[name=colorimage]",function(){
             var image=$(this).find("img").attr("image");

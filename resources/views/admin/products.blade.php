@@ -16,7 +16,6 @@
                     <th style="width: 30%;">Imagine</th>
                     <th>Culori</th>
                     <th>Marimi</th>
-                    <th>Pretul</th>
                     <th style="width: 230px;">Setari</th>
                 </tr>
                 @foreach($post as $key=>$i)
@@ -29,9 +28,6 @@
                         </td>
                         <td>
                             {{$i["countmarimi"]}} marimi
-                        </td>
-                        <td>
-                            {{$i["product"]->price}}
                         </td>
                         <td>
                             <a href="{{URL('admin/modproduct/'.$i["product"]->product_id)}}" class="btn btn-primary">

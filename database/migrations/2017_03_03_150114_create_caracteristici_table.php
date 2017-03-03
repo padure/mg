@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMarimiTable extends Migration
+class CreateCaracteristiciTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateMarimiTable extends Migration
      */
     public function up()
     {
-        Schema::create('marimi', function (Blueprint $table) {
-            $table->increments('marimi_id');
-            $table->integer("product_id");
-            $table->string("marime");
-            $table->string("price");
+        Schema::create('caracteristici', function (Blueprint $table) {
+            $table->increments('caracteristici_id');
+            $table->integer('product_id');
+            $table->text('caracteristica');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateMarimiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('marimi');
+        Schema::dropIfExists('caracteristici');
     }
 }

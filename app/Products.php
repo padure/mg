@@ -9,12 +9,15 @@ class Products extends Model
 {
     public function getAllProducts(){
         $return=DB::table("products")
-                    ->select("products.*","colors.*","marimi.*")
+                    ->select("products.*","colors.*","marimi.*","caracteristici.*")
                     ->leftJoin("colors",function($join){
                         $join->on('colors.product_id', '=', 'products.product_id');
                     })
                     ->leftJoin("marimi",function($join){
                         $join->on('marimi.product_id', '=', 'products.product_id');
+                    })
+                    ->leftJoin("caracteristici",function($join){
+                        $join->on('caracteristici.product_id', '=', 'products.product_id');
                     })
                     ->orderBy("products.product_id")
                     ->get();
@@ -23,6 +26,7 @@ class Products extends Model
             $arr[$i->product_id]["product"] = $i;
             $arr[$i->product_id]["colors"][$i->color_id]= $i;
             $arr[$i->product_id]["marimi"][$i->marimi_id]= $i; 
+            $arr[$i->product_id]["caracteristici"][$i->caracteristici_id]= $i; 
         }
         return $arr;
     }
