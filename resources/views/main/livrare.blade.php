@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         @include('main.meniu')
-        <div class="content font">
+        <div class="content font livrare-bak">
                     <div class="col-md-12">
                         <h1>Возврат или обмен товара</h1>
                         <p class="liv-description">Возврат и обмен приобретенной у нас бескаркасной мебели и других товаров осуществляется быстро и
