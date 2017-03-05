@@ -8,11 +8,35 @@
     </div> 
     <div class="content">
         <div class="col-md-8" style="padding-left:0px;">
-                <iframe width="100%" height="450px" 
-                        src="http://www.youtube.com/embed/GRonxog5mbw?autoplay=1&loop=1&playlist=GRonxog5mbw" 
-                        frameborder="0" 
-                        allowfullscreen>
-                </iframe>​
+            <video controls="true" style="width: 100%;" autoplay="" loop="">
+                <source src="https://www.youtube.com/watch?v=ZoDZFucZPKQ" type="video/mp4" />
+            </video>
+            <script>
+                videos = document.querySelectorAll("video");
+                for (var i = 0, l = videos.length; i < l; i++) {
+                    var video = videos[i];
+                    var src = video.src || (function () {
+                        var sources = video.querySelectorAll("source");
+                        for (var j = 0, sl = sources.length; j < sl; j++) {
+                            var source = sources[j];
+                            var type = source.type;
+                            var isMp4 = type.indexOf("mp4") != -1;
+                            if (isMp4) return source.src;
+                        }
+                        return null;
+                    })();
+                    if (src) {
+                        var isYoutube = src && src.match(/(?:youtu|youtube)(?:\.com|\.be)\/([\w\W]+)/i);
+                        if (isYoutube) {
+                            var id = isYoutube[1].match(/watch\?v=|[\w\W]+/gi);
+                            id = (id.length > 1) ? id.splice(1) : id;
+                            id = id.toString();
+                            var mp4url = "http://www.youtubeinmp4.com/redirect.php?video=";
+                            video.src = mp4url + id;
+                        }
+                    }
+                }
+            </script>
         </div>
         <div class="col-md-4 contacts-info contacts-margin">
             <div class="col-md-12">
@@ -29,5 +53,4 @@
                 <button class="btn btn-primary form-control"><span class="glyphicon glyphicon-earphone"></span> Telefonati</button>
             </div>
         </div>
-    </div>
 </div>
