@@ -39,24 +39,17 @@
                             @endif
                         </div>
                     </div>
+                    <div class="clearfix"></div>
+                    <p class="text-center text-danger" id="select{{$i['product']->product_id}}" style="display:none;">
+                        <b>
+                            Selectati culoarea si marimea
+                        </b>
+                    </p>
                 </div>
 
-                <div class="col-md-7 col-sm-10 col-xs-12">
+                <div class="col-md-7 col-sm-10 col-xs-12" style="padding-right: 0px;">
                     <div class="col-md-6 col-xs-6 hidden-sm hidden-xs">
-                        <p class="pret calibri" id="price{{$i['product']->product_id}}">
-                            @if(!empty($i['marimi']) && count($i['marimi'])>0)
-                                @foreach($i['marimi'] as $keymarimi=>$imarimi)
-                                    {{$imarimi->price}}
-                                    <?php break;?>
-                                @endforeach
-                            @endif
-                        </p>
-                        <button class="btn btn-primary suna" idprod="{{$i['product']->product_id}}" name="comanda">
-                            Zacaji
-                        </button>
-                    </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div class="dropdown hidden-xs" style="margin-top:5px;">
+                        <div class="dropdown" style="margin-top:5px;">
                             <span class="produse dropdown-toggle" data-toggle="dropdown">
                                 <button class="btn btn-default" style="outline:0">
                                     <span class="glyphicon glyphicon-chevron-down"></span>
@@ -73,7 +66,22 @@
                                 @endif
                             </div>
                         </div>
-                        <form class="form-horizontal form_trimite">
+                        
+                        <p class="pret calibri" id="price{{$i['product']->product_id}}">
+                            @if(!empty($i['marimi']) && count($i['marimi'])>0)
+                                @foreach($i['marimi'] as $keymarimi=>$imarimi)
+                                    {{$imarimi->price}}
+                                    <?php break;?>
+                                @endforeach
+                            @endif
+                        </p>
+                        <button class="btn btn-primary suna" idprod="{{$i['product']->product_id}}" name="comanda">
+                            Zacaji
+                        </button>
+                        
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <form class="form_trimite" id="form{{$i['product']->product_id}}">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="email" placeholder="Email">
                             </div>
@@ -83,9 +91,13 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" name="name" placeholder="Nume">
                             </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block">
+                                    Ok
+                                </button>
+                            </div>
                         </form>
                     </div>
-
                     <div class="col-md-6 col-xs-12 visible-sm visible-xs">
                         <p class="pret" id="pricem{{$i['product']->product_id}}">
                             {{$i['product']->price}}
@@ -103,10 +115,15 @@
             var idprodus=$(this).attr("idprod");
             var idcolor=$("#idcomanda"+idprodus).attr("valuec");
             var idmarime=$("#idcomanda"+idprodus).attr("valuem");
+            $("#select"+idprodus).css("display","none");
             if(idcolor>0 && idmarime>0){
-                alert("Comanda "+idprodus+" Culoare id "+idcolor+" marime id "+idmarime);
+                $("#form"+idprodus).show();
+                $("#form"+idprodus).animate({
+                                    width: '100%'
+                                });
+                 $("#form"+idprodus).find("input[name=email]").focus();               
             }else{
-                alert("Nu ati ales culoarea sau marimea");
+                $("#select"+idprodus).css("display","block");
             }
         });
         $("body").on("click","div[name=marime]",function(){

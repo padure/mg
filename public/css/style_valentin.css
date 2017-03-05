@@ -70,7 +70,7 @@ and open the template in the editor.
     border-radius:3px;
 }
 .pret{
-    margin-top: 75%;
+    margin-top: 70%;
     margin-bottom: 0px;
     font-weight: bold;
     color: #5cb956;
@@ -78,11 +78,14 @@ and open the template in the editor.
     font-size: 30px;
 }
 .suna{
-    margin-top: 75%;
+    margin-top: 70%;
     margin-left:15px;
 }
 .form_trimite{
-    margin-top:17%;
+    margin-top:22%;
+    display:none;
+    width:0px;
+    float:right;
 }
 @media screen and (max-width: 1200px) {
     .culoare{
