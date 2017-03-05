@@ -1,5 +1,5 @@
 <div class="content publicitate">
-    <div class="col-md-6 img-pub">
+    <div class="col-md-6 img-pub" style="margin-right: 2%;">
         <h2>Livrare</h2>
         <img src="{{asset('images/livrare.png')}}" alt="" class="img-responsive livrare-icon">
         <p class="title-l">Быстрая и бережная доставка</p>
