@@ -33,6 +33,17 @@ class LogoController extends Controller
             DB::table("logo")->where("variable","descrierea")->update(["valuevariable"=>$request->descrierea]);
         }
     }
+    public function adddescriereaformei(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $descriereaformei = DB::table("logo")->where("variable","descriereaformei")->first();
+        if(is_null($descriereaformei)){
+            DB::table("logo")->insert(["variable"=>"descriereaformei","valuevariable"=>$request->descrierea]);
+        }else{
+            DB::table("logo")->where("variable","descriereaformei")->update(["valuevariable"=>$request->descrierea]);
+        }
+    }
     public function logo(Logo $logo){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");

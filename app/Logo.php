@@ -13,7 +13,8 @@ class Logo extends Model
         $nrtel=DB::table('logo')->where("variable","telefon")->first();
         $social=DB::table('social')->get();
         $descrierea=DB::table('logo')->where("variable","descrierea")->first();
+        $descriereaformei=DB::table('logo')->where("variable","descriereaformei")->first();
         $video=DB::table('logo')->where("variable","video")->first();
-        return ["logo"=>$logo,"ore"=>$ore,"nrtel"=>$nrtel,"social"=>$social,"descrierea"=>$descrierea,"video"=>$video];
+        return ["logo"=>$logo,"ore"=>$ore,"nrtel"=>$nrtel,"social"=>$social,"descrierea"=>$descrierea,"video"=>$video,"descriereaformei"=>$descriereaformei];
     }
 }

@@ -150,6 +150,24 @@
     </div>
 </form>
 <div class="clearfix"></div>
+<form name="descriereaformei">
+    <label>Descrierea formei pentru contact</label>
+    <div class="form-group">
+        @if(!empty($post['descriereaformei']) && count($post['descriereaformei'])>0)
+            <input type="text" class="form-control" name="descriereaformei" placeholder="text" value="{{$post['descriereaformei']->valuevariable}}"/>
+        @else
+            <input type="text" class="form-control" name="descriereaformei" placeholder="text"/>
+        @endif
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" id="descriereaformei" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se salveaza">
+            Salveaza
+        </button>
+        <br>
+        <label id="salvatdescriereaformei" class="text-success"></label>
+    </div>
+</form>
+<div class="clearfix"></div>
 <form name="video">
     <label>Video link youtube</label>
     <div class="form-group">
@@ -205,6 +223,26 @@
                 }
             });
         });
+        
+        $("form[name=descriereaformei]").on("submit",function(e){
+            e.preventDefault();
+            $("#descriereaformei").button("loading");
+            $.ajax({
+                type:'POST',
+                url: "{{URL('/admin/adddescriereaformei')}}",
+                data:{
+                    descrierea:$("input[name=descriereaformei]").val()
+                },
+                success:function(){
+                    $("#descriereaformei").button("reset");
+                    $("#salvatdescriereaformei").text("Sa salvat");
+                },
+                error:function(){
+                    location.reload();
+                }
+            });
+        });
+        
         $("form[name=social]").on("submit",function(e){
             e.preventDefault();
             $("#socialbutton").button("loading");

@@ -36,7 +36,8 @@
     Route::post('/admin/addtelefon','Admin\LogoController@addtelefon');
     Route::post('/admin/addsocial','Admin\LogoController@addsocial');
     Route::post('/admin/adddescrierea','Admin\LogoController@adddescrierea');
-     Route::post('/admin/addvideo','Admin\LogoController@addvideo');
+    Route::post('/admin/adddescriereaformei','Admin\LogoController@adddescriereaformei');
+    Route::post('/admin/addvideo','Admin\LogoController@addvideo');
     
 /*Products*/
     Route::get('/admin/products','Admin\ProductsController@products');
@@ -51,3 +52,7 @@
     
 /*Comenzi*/
     Route::get('/admin/comenzi','Admin\ComenziController@comenzi');
+    
+/*Descrierea*/
+    Route::get('/admin/descrierea','Admin\DescriereaController@descrierea');
+    Route::post('/admin/savedescrierea','Admin\DescriereaController@savedescrierea');
