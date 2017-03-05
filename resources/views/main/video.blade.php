@@ -1,10 +1,10 @@
-<div class="content video">
+<div class="content" style="margin-top: 20px; margin-bottom: 15px;">
     <div class="col-md-12 title">
         <div class="row">
             <p class="title-description">
                 Title - Deescription the this site MG
             </p>
-        </div> 
+        </div>
     </div> 
     <div class="content">
         <div class="col-md-8" style="padding-left:0px;">
@@ -41,16 +41,17 @@
         <div class="col-md-4 contacts-info contacts-margin">
             <div class="col-md-12">
                 <p class="title-contacts">
-                    Text - description for contacts
+                    Text - description for contacts Text - description for contacts description for contacts
                 </p>
             </div>
         </div>
-        <div class="col-md-4 contacts-info">
+        <div class="col-md-4 contacts-info" style="margin-top: 10px;">
             <div class="col-md-12 form">
-                <p>Form</p>
+                <p class="description-form">Description form</p>
                 <input type="text" class="form-control" placeholder="Telefon"/>
                 <input type="text" class="form-control" placeholder="Nume, Prenume" />
                 <button class="btn btn-primary form-control"><span class="glyphicon glyphicon-earphone"></span> Telefonati</button>
             </div>
         </div>
+    </div>
 </div>
