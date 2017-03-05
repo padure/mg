@@ -29,6 +29,9 @@
                     Pret
                 </th>
                 <th>
+                    Data
+                </th>
+                <th>
                     Setari
                 </th>
             </tr>
@@ -60,7 +63,9 @@
                 </td>
                 <td>
                     20-06-2017
-                    <a class="btn btn-danger pull-right">
+                </td>
+                <td>
+                    <a class="btn btn-danger pull-right" >
                         <span class="glyphicon glyphicon-remove"></span>
                         Sterge
                     </a>
