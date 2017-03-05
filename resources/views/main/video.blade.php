@@ -4,7 +4,7 @@
             <p class="title-description">
                 Title - Deescription the this site MG
             </p>
-        </div>
+        </div> 
     </div> 
     <div class="content">
         <div class="col-md-8" style="padding-left:0px;">
