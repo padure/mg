@@ -56,3 +56,5 @@
 /*Descrierea*/
     Route::get('/admin/descrierea','Admin\DescriereaController@descrierea');
     Route::post('/admin/savedescrierea','Admin\DescriereaController@savedescrierea');
+/*Contact*/
+    Route::get('/admin/contactus','Admin\ContactusController@contactus');
