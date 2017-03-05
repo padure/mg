@@ -7,6 +7,8 @@
             @include('main.video')
 
             @include('main.descriere')
+            
+            @include('main.detalii')
 
             @include('main.produse')
 
