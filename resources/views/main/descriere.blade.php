@@ -7,11 +7,7 @@
             <li>Description 4</li>
             <li>Description 5</li>
             <li>Description 6</li>
-            <li>Description 6</li>
-            <li>Description 6</li>
-            <li>Description 6</li>
-            <li>Description 6</li>
-            <li>Description 6</li>
+           
         </ul>
     </div>
 </div>
