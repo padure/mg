@@ -10,7 +10,7 @@
                 else{
                     echo "pull-left";
                 }
-                $nr++;
+                $nr++; 
             ?>
         "> 
             <div class="row">
