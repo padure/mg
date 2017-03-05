@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="col-md-6 col-xs-12 visible-sm visible-xs">
-                        <p class="pret" id="price{{$i['product']->product_id}}">
+                        <p class="pret" id="pricem{{$i['product']->product_id}}">
                             {{$i['product']->price}}
                         </p>
                         <button class="btn btn-primary suna" idprod="{{$i['product']->product_id}}" name="comanda">
@@ -124,6 +124,7 @@
                 $("#idcomanda"+id).attr("valuem",idmarime);
             }
             $("#price"+id).html(price);
+            $("#pricem"+id).html(price);
         });
         $("body").on("click","div[name=colorimage]",function(){
             var image=$(this).find("img").attr("image");
