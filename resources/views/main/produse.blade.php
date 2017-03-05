@@ -48,8 +48,8 @@
                 </div>
 
                 <div class="col-md-7 col-sm-10 col-xs-12" style="padding-right: 0px;">
-                    <div class="col-md-6 col-xs-6 hidden-sm hidden-xs">
-                        <div class="dropdown" style="margin-top:5px;">
+                    <div class="col-md-5 col-xs-6">
+                        <div class="dropdown hidden-sm hidden-xs" style="margin-top:5px;">
                             <span class="produse dropdown-toggle" data-toggle="dropdown">
                                 <button class="btn btn-default" style="outline:0">
                                     <span class="glyphicon glyphicon-chevron-down"></span>
@@ -80,7 +80,7 @@
                         </button>
                         
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-7 col-xs-12">
                         <form class="form_trimite" id="form{{$i['product']->product_id}}">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="email" placeholder="Email">
@@ -98,14 +98,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-6 col-xs-12 visible-sm visible-xs">
-                        <p class="pret" id="pricem{{$i['product']->product_id}}">
-                            {{$i['product']->price}}
-                        </p>
-                        <button class="btn btn-primary suna" idprod="{{$i['product']->product_id}}" name="comanda">
-                            Zacaji
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -141,7 +134,6 @@
                 $("#idcomanda"+id).attr("valuem",idmarime);
             }
             $("#price"+id).html(price);
-            $("#pricem"+id).html(price);
         });
         $("body").on("click","div[name=colorimage]",function(){
             var image=$(this).find("img").attr("image");
