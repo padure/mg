@@ -39,13 +39,15 @@
             </script>
         </div>
         <div class="col-md-4 contacts-info contacts-margin">
-            <div class="col-md-12">
-                <p class="title-contacts">
-                    Text - description for contacts Text - description for contacts description for contacts
-                </p>
+            <div class="col-md-12 title-contacts">
+                <ul>
+                    @for ($i = 1; $i < 7; $i++)
+                    <li>Description {{$i}}</li>
+                    @endfor
+                </ul>
             </div>
         </div>
-        <div class="col-md-4 contacts-info" style="margin-top: 10px;">
+        <div class="col-md-4 contacts-info" style="margin-top: 10px; padding-top: 15px; padding-bottom: 15px;">
             <div class="col-md-12 form">
                 <p class="description-form">Description form</p>
                 <input type="text" class="form-control" placeholder="Telefon"/>
