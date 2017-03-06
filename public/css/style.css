@@ -161,14 +161,14 @@ body{
     padding: 30px;    
 }
 .atentie-t p{
-    font-size: 32px;
-    color: green;
+    font-size: 30px;
+    color: white;
     padding: 15px;
     padding-left: 0;
 }
 .atentie-d p{
-    font-size: 26px;
-    color: gray;
+    font-size: 22px;
+    color: white;
 }
 .padding{
     margin-bottom: 40px;
@@ -199,4 +199,11 @@ body{
     .img-pub, .title-pub{
     width: 49%;
 }
+}
+.at-t p{
+    color: #216a94!important;
+}
+.at-d p{
+    color: #216a94!important;
+    font-weight: 600;
 }

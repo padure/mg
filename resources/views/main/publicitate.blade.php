@@ -13,36 +13,32 @@
     </div>
 </div>
 <div class="content col-md-12 font" style="margin-top: 20px; margin-bottom: 20px;">
-                <div class="col-md-12 desc-liv">
-                    <p class="liv-description">Для обмена товара на алогичный с другой расцветкой, Вам достаточно привезти к нам внешний съемный чехол, который легко
-                    умещается в сумку или рюкзак!</p>   
-                </div>
-                <div class="col-md-12 atentie padding">
-                    <div class="col-md-3 img-l">
-                        <img src="{{asset('images/pantone.png')}}" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="col-md-12 atentie-t">
-                            <p>Aveti indoieli in culoare?</p>
-                        </div>
-                        <div class="col-md-12 atentie-d">
-                            <p>Nu va faceti griji! Noi aducem citevai culori pentru alegeerea DVS. 
-                                Puteti sa lee analizati si sa alegeti pe cel dorit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 atentie">
-                    <div class="col-md-3 img-l">
-                        <img src="{{asset('images/shield.png')}}" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="col-md-12 atentie-t">
-                            <p>Garantia pentru toate produsele</p>
-                        </div>
-                        <div class="col-md-12 atentie-d">
-                            <p>Suntem atit de increzuti in produsele noastree ca va oferim o garantie de 
-                                1 an peentru fiecare cumparatura efectuata de DVS.</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="col-md-12 desc-liv">
+        <p class="liv-description">Для обмена товара на алогичный с другой расцветкой, Вам достаточно привезти к нам внешний съемный чехол, который легко умещается в сумку или рюкзак!
+        </p>   
+    </div>
+    <div class="content publicitate" style="margin-bottom: 0; margin-top: 0;">
+        <div class="col-md-6 title-pub" style="margin-right: 2%; height: 500px;">
+            <div class="col-md-12 atentie-t">
+                <p>Garantia pentru toate produsele</p>
             </div>
+            <img src="{{asset('images/shield.png')}}" alt="" class="img-responsive" style="padding: 0; width: 40%;">
+            <div class="col-md-12 atentie-d">
+                <p>Suntem atit de increzuti in produsele noastree ca va oferim o garantie de 
+                                    1 an peentru fiecare cumparatura efectuata de DVS.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 img-pub" style="height: 500px;">
+            <div class="col-md-12 atentie-t at-t">
+                <p>Aveti indoieli in culoare?</p>
+            </div>
+            <img src="{{asset('images/pantone.png')}}" alt="" class="img-responsive" style="padding: 0; width: 40%;">
+            <div class="col-md-12 atentie-d at-d">
+                <p style="text-align: justify;">Nu va faceti griji! Noi aducem citevai culori pentru alegeerea DVS. 
+                  Puteti sa le analizati si sa alegeti pe cel dorit.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
