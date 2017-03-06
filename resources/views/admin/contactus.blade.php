@@ -12,7 +12,7 @@
                     Telefon
                 </th>
                 <th>
-                    Data
+                    Data / Ora
                 </th>
                 <th style="width: 10%;">
                     Setari
@@ -30,7 +30,7 @@
                     079343434
                 </td>
                 <td>
-                    24-03-2017
+                    24-03-2017 / 23 - 00
                 </td>
                 <td>
                     <a class="btn btn-danger pull-right">
