@@ -58,5 +58,8 @@
 /*Descrierea*/
     Route::get('/admin/descrierea','Admin\DescriereaController@descrierea');
     Route::post('/admin/savedescrierea','Admin\DescriereaController@savedescrierea');
+/*Descrierea Video*/
+    Route::get('/admin/descriereavideo','Admin\DescriereaController@descriereavideo');
+    Route::post('/admin/savedescriereavideo','Admin\DescriereaController@savedescriereavideo');
 /*Contact*/
     Route::get('/admin/contactus','Admin\ContactusController@contactus');

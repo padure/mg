@@ -27,4 +27,23 @@ class DescriereaController extends Controller
         DB::table("descrierea")->delete();
         DB::table("descrierea")->insert($all);
     }
+    public function descriereavideo(){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin/login");
+        }
+        $descrierea=DB::table("descriereavideo")->get();
+        return view("admin.descriereavideo",["post"=>$descrierea]);
+    }
+    public function savedescriereavideo(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin/login");
+        }
+        $descrierea=$request->descrierea;
+        $all=[];
+        for($i=0;$i< count($descrierea);$i++){
+            $all[]=["descrierea"=>$descrierea[$i]];
+        }
+        DB::table("descriereavideo")->delete();
+        DB::table("descriereavideo")->insert($all);
+    }
 }

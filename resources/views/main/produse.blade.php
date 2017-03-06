@@ -2,7 +2,6 @@
 @if(!empty($products) && count($products)>0)
 <?php $nr=0;?>
     @foreach($products as $key=>$i)
-    
         <div class="col-lg-10 produs 
             <?php 
                 if($nr%2==0){
