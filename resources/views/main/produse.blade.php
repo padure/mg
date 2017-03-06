@@ -16,7 +16,9 @@
         "> 
             <div class="row">
                 <div class="col-md-3" style="padding-left: 0px;">
-                    <img src="{{asset($i['product']->image)}}" class="img-responsive" id="imageprod{{$i['product']->product_id}}"/>
+                    <a href="{{ asset ( $i['product']->image ) }}" data-title="" data-lightbox="Vacation">
+                      <img src="{{asset($i['product']->image)}}" class="img-responsive img-thumbnail" id="imageprod{{$i['product']->product_id}}"/>
+                    </a> 
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-12">
                     <div class="col-sm-6 col-xs-12">
@@ -244,4 +246,5 @@
         });
     </script>
 @endif
+<script src="{{ asset("js/lightbox.min.js") }}"></script>
 </div>
