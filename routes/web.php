@@ -52,6 +52,8 @@
     
 /*Comenzi*/
     Route::get('/admin/comenzi','Admin\ComenziController@comenzi');
+    Route::post('/comandaprodus','Admin\ComenziController@comandaprodus');
+    Route::post('/admin/deleteprod','Admin\ComenziController@deleteprod');
     
 /*Descrierea*/
     Route::get('/admin/descrierea','Admin\DescriereaController@descrierea');

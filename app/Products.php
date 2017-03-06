@@ -9,7 +9,7 @@ class Products extends Model
 {
     public function getAllProducts(){
         $return=DB::table("products")
-                    ->select("products.*","colors.*","marimi.*","caracteristici.*")
+                    ->select("products.*","colors.color_id","colors.color","colors.image_color","marimi.marimi_id","marimi.marime","marimi.price","caracteristici.caracteristici_id","caracteristici.caracteristica")
                     ->leftJoin("colors",function($join){
                         $join->on('colors.product_id', '=', 'products.product_id');
                     })
