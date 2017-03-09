@@ -14,17 +14,19 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL("/admin/products")}}">Produse</a></li>
                     <li><a href="{{URL("/admin/comenzi")}}">Comenzi</a></li>
-                    <li><a href="{{URL("/admin/users")}}">Admini</a></li>
+                    
                     <li><a href="{{URL("/admin/logo")}}">Meniu</a></li>
                     <li><a href="{{URL("/admin/descrierea")}}">Descrierea</a></li>
                     <li><a href="{{URL("/admin/descriereavideo")}}">Descrierea Video</a></li>
                     <li><a href="{{URL("/admin/contactus")}}">Contact</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Altele
+                            <span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Page 1-1</a></li>
-                            <li><a href="#">Page 1-2</a></li>
-                            <li><a href="#">Page 1-3</a></li>
+                            <li><a href="{{URL("/admin/users")}}">Admini</a></li>
+                            <li><a href="{{URL("/admin/publicitate")}}">Publicitate</a></li>
                         </ul>
                     </li>
                 </ul>
