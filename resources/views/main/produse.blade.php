@@ -53,12 +53,12 @@
                     <div class="col-md-5 col-xs-6">
                         <div class="dropdown hidden-sm hidden-xs" style="margin-top:5px;">
                             <span class="produse dropdown-toggle" data-toggle="dropdown">
-                                <button class="btn btn-default" style="outline:0">
+                                <button class="caracteristici" style="outline:0">
                                     <span class="glyphicon glyphicon-chevron-down"></span>
                                     Caracteristici
                                 </button>
                             </span>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu descriptionclass">
                                 @if(!empty($i['caracteristici']) && count($i['caracteristici'])>0)
                                     @foreach($i['caracteristici'] as $keymarimi=>$icaracteristici)
                                         <p>
@@ -77,7 +77,7 @@
                                 @endforeach
                             @endif
                         </p>
-                        <button class="btn btn-primary suna" idprod="{{$i['product']->product_id}}" name="comanda">
+                        <button class="suna" idprod="{{$i['product']->product_id}}" name="comanda">
                             Zacaji
                         </button>
                         
@@ -94,7 +94,7 @@
                                 <input type="text" class="form-control" name="name" placeholder="Nume">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary btn-block" data-loading-text="<i class='fa fa-spinner fa-spin'></i>">
+                                <button class="suna btn-block" data-loading-text="<i class='fa fa-spinner fa-spin'></i>" style="margin:0px;">
                                     Ok
                                 </button>
                             </div>
