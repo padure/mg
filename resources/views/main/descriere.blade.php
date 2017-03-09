@@ -1,13 +1,11 @@
 <div class="content description">
     <div class="col-md-6 info-description pull-right" >
-        <ul>
-            <li>Description 1</li>
-            <li>Description 2</li>
-            <li>Description 3</li>
-            <li>Description 4</li>
-            <li>Description 5</li>
-            <li>Description 6</li>
-           
-        </ul>
+        @if(!empty($descriereaprod) && count($descriereaprod)>0)
+            <ul>
+                @foreach($descriereaprod as $i)
+                    <li>{{$i->descrierea}}</li>
+                @endforeach
+            </ul>
+        @endif
     </div>
 </div>

@@ -22,7 +22,7 @@
         });
         </script>
     </head>
-    <body style="">
+    <body onload="video();">
         @yield('content')
     </body>
 </html>
