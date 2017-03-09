@@ -78,7 +78,7 @@
                             @endif
                         </p>
                         <button class="suna" idprod="{{$i['product']->product_id}}" name="comanda">
-                            Zacaji
+                            Comandă
                         </button>
                         
                     </div>
