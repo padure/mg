@@ -11,7 +11,7 @@
         <input type="text" class="form-control"/>
     </div>
     <div class="col-md-12" style="padding: 15px;">
-        <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span>Modifica</button>
+        <button class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span>Modifica</button>
          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</button>
     </div>
     <div class="col-md-12 b">
@@ -22,7 +22,7 @@
         <input type="text" class="form-control"/>
     </div>
     <div class="col-md-12" style="padding: 15px;">
-        <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span>Modifica</button>
+        <button class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span>Modifica</button>
          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</button>
     </div>
     <div class="col-md-12 gray">
@@ -33,7 +33,7 @@
         <input type="text" class="form-control"/>
     </div>
     <div class="col-md-12" style="padding: 15px;">
-        <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span>Modifica</button>
+        <button class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span>Modifica</button>
          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</button>
     </div>
       <div class="col-md-12 b">
@@ -44,7 +44,7 @@
         <input type="text" class="form-control"/>
     </div>
     <div class="col-md-12" style="padding: 15px;">
-        <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span>Modifica</button>
+        <button class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span>Modifica</button>
          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</button>
     </div>
       <div class="col-md-12 gray">
@@ -52,7 +52,7 @@
         <textarea rows="4" cols="50" class="form-control"></textarea>
     </div>
     <div class="col-md-12" style="padding: 15px;">
-        <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span>Modifica</button>
+        <button class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span>Modifica</button>
          <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</button>
     </div>
     <div class="col-md-12 b">
@@ -61,10 +61,15 @@
         <input type="text" class="form-control"/>
         <label>Descriere Despre Livrare</label>
         <textarea rows="4" cols="50" class="form-control"></textarea>
+        <label>Titlu Lista</label>
+        <input type="text" class="form-control"/>
+        <div class="col-md-12" style="padding: 15px;  padding-left: 0;">
+            <button class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Adauga element</button>
+        </div>
     </div>
     <div class="col-md-12" style="padding: 15px;">
-        <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span>Modifica</button>
-         <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</button>
+        <button class="btn btn-primary"><span class="glyphicon glyphicon-cog"></span>Modifica</button>
+        <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sterge</button>
     </div>
 </div>
 @endsection
