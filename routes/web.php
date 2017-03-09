@@ -65,3 +65,8 @@
     Route::get('/admin/contactus','Admin\ContactusController@contactus');
 /*Publicitate*/
     Route::get('/admin/publicitate','Admin\PublicitateController@publicitate');
+    
+    
+    
+    
+    
