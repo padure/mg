@@ -12,7 +12,15 @@ class PublicitateController extends Controller
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");
         }
-        return view("admin.publicitate");
+        $return=[];
+        $return["livrare"]=DB::table("livrare")->first();
+        $return["intoarcere"]=DB::table("intoarcere")->first();
+        $return["garantia"]=DB::table("garantia")->first();
+        $return["indoieli"]=DB::table("indoieli")->first();
+        $return["descrierepub"]=DB::table("descrierepub")->first();
+        $return["despreliv"]=DB::table("despreliv")->first();
+        $return["livrarelista"]=DB::table("livrarelista")->get();
+        return view("admin.publicitate",["post"=>$return]);
     }
     public function savepublicitate(Request $request){
        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
@@ -45,8 +53,15 @@ class PublicitateController extends Controller
         DB::table("descrierepub")->insert(["descriere"=>$ddescriere]);
         $livtitlu=$request->livtitlu;
         $livdescriere=$request->livdescriere;
-        DB::table("livrare")->delete();
-        DB::table("livrare")->insert(["titlu"=>$livtitlu,
+        DB::table("despreliv")->delete();
+        $id=DB::table("despreliv")->insertGetId(["titlu"=>$livtitlu,
                                       "descriere"=>$livdescriere]);
+        $elements=$request->elements;
+        $insert=[];
+        for($i=0;$i< count($elements);$i++){
+            $insert[]=["despreliv_id"=>$id,"lista"=>$elements[$i]];
+        }
+        DB::table("livrarelista")->delete();
+        DB::table("livrarelista")->insert($insert);
     }
 }
