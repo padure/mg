@@ -11,19 +11,19 @@
     <div class="col-md-4">
         @if(!empty($meniu["ore"]) && count($meniu["ore"])>0)
             @foreach($meniu["ore"] as $i)
-                <h4>
+                <h5>
                     {{$i->valuevariable}}
-                </h4>
+                </h5>
             @endforeach
         @endif
     </div>
     <div class="col-md-3">
-        <h2>
+        <h3>
             @if(!empty($meniu["nrtel"]) && count($meniu["nrtel"])>0)
                 <span class="glyphicon glyphicon-earphone"></span> 
                 {{$meniu["nrtel"]->valuevariable}}
             @endif
-        </h2>
+        </h3>
     </div>
     <div class="col-md-3">
         <div class="social">
