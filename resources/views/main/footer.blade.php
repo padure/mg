@@ -30,13 +30,13 @@
                 </h3>
             </div>
         </div>
-        <div class="col-md-12" style="padding: 0;">
+        <div class="col-md-12" style="padding: 0; border-top: 1px solid white; padding-top: 15px;">
                 <b style="font-size: 13px;">Sula Valentin: sula.valentin@gmail.com</b>
                 <b style="font-size: 13px;">Pădure Gheorghe: paduregheorghe7@gmail.com</b>
                 <p>
                 &copy; All Rights Reserved
             </p>
-            </div>
+        </div>
     </div>
 </div>
     
