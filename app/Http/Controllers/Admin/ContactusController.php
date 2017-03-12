@@ -20,7 +20,7 @@ class ContactusController extends Controller
         DB::table("contactus")->insert([
             "nume"=>$request->nume,
             "telefon"=>$request->telefon,
-            "created_at"=>Carbon::now()
+            "created_at"=>Carbon::now(3)
         ]);
     }
     public function deletetelefon(Request $request){
