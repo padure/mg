@@ -94,8 +94,8 @@ body{
 .info-description li{
     text-transform: uppercase;
     padding: 5px;
-    font-size: 40px;
-    
+    font-size: 30px;
+    list-style: none;    
 }
 /*Publicitate*/
 .publicitate{
