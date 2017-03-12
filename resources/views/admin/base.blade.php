@@ -27,6 +27,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{URL("/admin/users")}}">Admini</a></li>
                             <li><a href="{{URL("/admin/publicitate")}}">Publicitate</a></li>
+                            <li><a href="{{URL("/admin/toatecomenzile")}}">Toate comenzile</a></li>
                         </ul>
                     </li>
                 </ul>

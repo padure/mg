@@ -22,6 +22,7 @@ class CreateComenziTable extends Migration
             $table->string("produs");
             $table->string("culoare");
             $table->string("pret");
+            $table->boolean("sters")->default(0);
             $table->timestamp('created_at');
             
         });

@@ -10,6 +10,13 @@ use DB;
 
 class ComenziController extends Controller
 {
+    public function toatecomenzile(Comenzi $comenzi){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $post=$comenzi->getAllComenzi();
+        return view("admin.toatecomenzile",["post"=>$post]);
+    }
     public function comenzi(Comenzi $comenzi){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");
@@ -22,7 +29,7 @@ class ComenziController extends Controller
             return redirect("/admin");
         }
         $id=$request->id;
-        DB::table("comenzi")->where("id",$id)->delete();
+        DB::table("comenzi")->where("id",$id)->update(["sters"=>1]);
     }
     public function comandaprodus(Request $request){
         $idprodus=$request->idprodus;
