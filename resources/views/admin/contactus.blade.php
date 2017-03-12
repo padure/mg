@@ -31,7 +31,7 @@
                     {{ $i->telefon }}
                 </td>
                 <td>
-                    {{date('d-m-Y', strtotime($i->created_at))}}
+                    {{date('d-m-Y', strtotime($i->created_at))}} / {{date('H:i', strtotime($i->created_at))}}
                 </td>
                 <td>
                     <a class="btn btn-danger pull-right" name="stergecomanda" id="{{$i->id}}">

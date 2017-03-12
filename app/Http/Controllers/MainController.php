@@ -23,8 +23,14 @@ class MainController extends Controller
                                 "publicitate"=>$publicitate
                                ]); 
     }
-    public function livrare(){
-        return view("main.livrare");
+    public function livrare(Logo $logo){
+        $meniu=$logo->getInfo();
+        $despre=DB::table("despreliv")->first();
+        $lista=DB::table("livrarelista")->get();
+        return view("main.livrare",["meniu"=>$meniu,
+                                    "despre"=>$despre,
+                                    "lista"=>$lista
+                                    ]);
     }
 }
 
