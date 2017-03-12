@@ -63,6 +63,9 @@
     Route::post('/admin/savedescriereavideo','Admin\DescriereaController@savedescriereavideo');
 /*Contact*/
     Route::get('/admin/contactus','Admin\ContactusController@contactus');
+    Route::post('/telefoneaza','Admin\ContactusController@telefoneaza');
+    Route::post('/admin/deletetelefon','Admin\ContactusController@deletetelefon');
+    
 /*Publicitate*/
     Route::get('/admin/publicitate','Admin\PublicitateController@publicitate');
     Route::post('/admin/savepublicitate','Admin\PublicitateController@savepublicitate');

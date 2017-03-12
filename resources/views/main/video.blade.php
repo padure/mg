@@ -79,9 +79,71 @@
                             {{$meniu["descriereaformei"]->valuevariable}}
                         @endif
                     </p>
-                    <input type="text" class="form-control" placeholder="Telefon"/>
-                    <input type="text" class="form-control" placeholder="Nume, Prenume" />
-                    <button class="btn btn-primary form-control"><span class="glyphicon glyphicon-earphone"></span> Telefonati</button>
+                    <input type="text" class="form-control" placeholder="Telefon" name="telefon"/>
+                    <input type="text" class="form-control" placeholder="Nume, Prenume" name="numeprenume"/>
+                    <button class="btn btn-primary form-control" id="telefonati" data-loading-text="<i class='fa fa-spinner fa-spin'></i>">
+                        <span class="glyphicon glyphicon-earphone"></span> 
+                        Telefonati
+                    </button>
+                    <div class="modal fade" id="vetifiapelat" role="dialog">
+                        <div class="modal-dialog">
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title text-center text-success">Salvat</h4>
+                            </div>
+                            <div class="modal-body text-center">
+                                <h2 class="calibri text-success" style="margin: 0px 0px 15px 0px;">
+                                    In curind ve-ti fi apelat
+                                </h2>
+                                <button class="btn btn-default" data-dismiss="modal">Bine</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <script>
+                        $("#telefonati").on("click",function(){
+                            var permit=true;
+                            var nume=$("input[name=numeprenume]").val();
+                            var telefon=$("input[name=telefon]").val();
+                            if(nume.length===0){
+                                $("input[name=numeprenume]").css("border-color","red");
+                                $("input[name=numeprenume]").focus();
+                                permit=false;
+                            }else{
+                                $("input[name=numeprenume]").css("border-color","#ccc");
+                            }
+                            if(telefon.length===0){
+                                $("input[name=telefon]").css("border-color","red");
+                                $("input[name=telefon]").focus();
+                                permit=false;
+                            }else{
+                                $("input[name=telefon]").css("border-color","#ccc");
+                            }
+                            if(permit===true){
+                                var button=$("#telefonati");
+                                button.button("loading");
+                                $.ajax({
+                                    type:'POST',
+                                    url: "{{URL('/telefoneaza')}}",
+                                    data:{
+                                        nume:nume,
+                                        telefon:telefon
+                                    },
+                                    success:function(){
+                                        button.button("reset");
+                                        $("input[name=numeprenume]").val("");
+                                        $("input[name=telefon]").val("");
+                                        $("#vetifiapelat").modal();
+                                    },
+                                    error:function(){
+                                        alert("A aparut o eroare");
+                                    }
+                                });
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>

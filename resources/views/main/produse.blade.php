@@ -106,22 +106,22 @@
         </div>
     @endforeach
     <div class="modal fade" id="multumim_comanda" role="dialog">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title text-center">Multumim pentru comanda</h4>
-                </div>
-                <div class="modal-body text-center">
-                    <h2 class="calibri text-success" style="margin: 0px 0px 15px 0px;">
-                        In curind ve-ti fi apelat
-                    </h2>
-                    <button class="btn btn-default" data-dismiss="modal">Bine</button>
-                </div>
-              </div>
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Multumim pentru comanda</h4>
             </div>
+            <div class="modal-body text-center">
+                <h2 class="calibri text-success" style="margin: 0px 0px 15px 0px;">
+                    In curind ve-ti fi apelat
+                </h2>
+                <button class="btn btn-default" data-dismiss="modal">Bine</button>
+            </div>
+          </div>
         </div>
+    </div>
     <script>
         $(document).ready(function(){
             function closeform(id){
@@ -187,10 +187,10 @@
                             multumim(id);
                         },
                         error:function(){
-                            alert("A aparut o eroare")
+                            alert("A aparut o eroare");
                         }
                     });
-                };
+                }
             });
             $("body").on("click","button[name=comanda]",function(){
                 var idprodus=$(this).attr("idprod");
