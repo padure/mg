@@ -1,4 +1,4 @@
-<div class="content menu">
+<div class="content menu" style="border-bottom: 1px solid gray;">
     <div class="col-md-2"> 
         <a href="{{URL("/")}}"> 
             @if(!empty($meniu["logo"]) && count($meniu["logo"])>0)
@@ -38,5 +38,4 @@
             @endif
         </div>
     </div>
-    <hr style="border-bottom: 1px solid gray; width: 100%">
 </div>
