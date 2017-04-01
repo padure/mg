@@ -73,10 +73,7 @@ body{
 }
 /*Description*/
 .description{
-    border-top: none;
-    background-image: URL("../images/sac.jpg");
-    background-size: 100%;
-    opacity: 0.95;
+    
 }
 .info-description{
     text-shadow: 2px 2px black;

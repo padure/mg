@@ -22,12 +22,17 @@
                 @endif
             </div>
             <div class="col-md-4">
-                <h3>
+                <h4>
                     @if(!empty($meniu["nrtel"]) && count($meniu["nrtel"])>0)
                         <span class="glyphicon glyphicon-earphone"></span> 
                         {{$meniu["nrtel"]->valuevariable}}
                     @endif
-                </h3>
+                </h4>
+                @if(!empty($descriereaprod) && count($descriereaprod)>0)
+                @foreach($descriereaprod as $i)
+                   <h4><span class="glyphicon glyphicon-earphone"></span>{{$i->descrierea}}</h4>
+                @endforeach
+                @endif
             </div>
         </div>
         <div class="col-md-12" style="padding: 0; border-top: 1px solid white; padding-top: 15px;">

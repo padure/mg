@@ -24,6 +24,11 @@
                 {{$meniu["nrtel"]->valuevariable}}
             @endif
         </h3>
+        @if(!empty($descriereaprod) && count($descriereaprod)>0)
+                @foreach($descriereaprod as $i)
+                   <h3><span class="glyphicon glyphicon-earphone"></span>{{$i->descrierea}}</h3>
+                @endforeach
+        @endif
     </div>
     <div class="col-md-3">
         <div class="social">

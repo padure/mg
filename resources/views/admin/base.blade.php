@@ -16,7 +16,7 @@
                     <li><a href="{{URL("/admin/comenzi")}}">Comenzi</a></li>
                     
                     <li><a href="{{URL("/admin/logo")}}">Meniu</a></li>
-                    <li><a href="{{URL("/admin/descrierea")}}">Descrierea</a></li>
+                    <li><a href="{{URL("/admin/descrierea")}}">Telefoane</a></li>
                     <li><a href="{{URL("/admin/descriereavideo")}}">Descrierea Video</a></li>
                     <li><a href="{{URL("/admin/contactus")}}">Contact</a></li>
                     <li class="dropdown">
